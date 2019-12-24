@@ -45,6 +45,8 @@ func main() {
 			os.Exit(1)
 		}
 		fmt.Printf("message %s -> %s\n", conn.RemoteAddr().String(), conn.LocalAddr())
+
+		go handleRequest(conn)
 	}
 }
 
