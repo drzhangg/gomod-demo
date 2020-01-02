@@ -1,4 +1,4 @@
-package demo1
+package demo2
 
 import (
 	"bytes"
