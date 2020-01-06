@@ -11,16 +11,19 @@ require (
 	github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394
 	github.com/eclipse/paho.mqtt.golang v1.2.0
 	github.com/go-log/log v0.2.0
+	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gocolly/colly v1.2.0
 	github.com/golang/groupcache v0.0.0-20191027212112-611e8accdfc9 // indirect
-	github.com/jinzhu/gorm v1.9.11
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/klauspost/cpuid v1.2.2 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/olivere/elastic v6.2.26+incompatible
+	github.com/pkg/errors v0.8.0 // indirect
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/temoto/robotstxt v1.1.1 // indirect
+	golang.org/x/text v0.3.1-0.20180807135948-17ff2d5776d2 // indirect
+	google.golang.org/appengine v1.4.0 // indirect
 )
 
 replace (
