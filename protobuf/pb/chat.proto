@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "/chat";
+
+package chat;
+
+service Chat {
+    rpc BidStream(stream Request) returns (stream Response) {}
+}
+
+message Request {
+    string input = 1;
+}
+
+message Response {
+    string output = 2;
+}
