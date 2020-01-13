@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package demo;
+package pb;
 
 service demo {
     rpc GetUser (UserReq) returns (UserRsp) {
