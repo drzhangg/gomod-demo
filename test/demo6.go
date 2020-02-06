@@ -1,8 +1,8 @@
 package main
 
-func main() {
-	ch := make(chan int)
-	ch <- 1
+import "fmt"
 
-	<- ch
+func main() {
+	x := []int{1,2,}
+	fmt.Println(len(x))
 }
