@@ -26,4 +26,5 @@ func main() {
 	v1 = append(v1, 3)
 	fmt.Println(len(v1))
 	fmt.Println(cap(v1))
+
 }
