@@ -6,4 +6,5 @@ func main() {
 	a := [...]int{6:1}
 	fmt.Println(a)
 	fmt.Println(len(a))
+	fmt.Printf("%T",a)
 }
