@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	a := []int{1, 2, 3, 4, 5}
-	var z []int
-	zlen := len(a) + 1
-	z = a[:zlen]
-	fmt.Println(len(a))
-	fmt.Println(cap(a))
-	fmt.Println(z)
+	var x, y []int
+	for i := 0; i < 10; i++ {
+		y = appendInt(x, i)
+		fmt.Printf("%d cap=%d\t%v\n", i, cap(y), y)
+		x = y
+	}
+
 }
 
 func appendInt(x []int, y int) []int {
