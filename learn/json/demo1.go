@@ -8,10 +8,15 @@ import (
 func main() {
 	var s = `{"resultcode":"200","reason":"查询成功","result":{"Country":"","Province":"","City":"内网IP","Isp":"内网IP"},"error_code":0}`
 	m := unmarshalMap([]byte(s))
-	fmt.Println(m)
-	for k, v := range m {
-		fmt.Println(k, v)
+
+	mr := make(map[string]interface{})
+	for k, _ := range m {
+		if k == "result" {
+			mr[k] = m[k]
+		}
+		//fmt.Println(k, v)
 	}
+	fmt.Println(mr)
 }
 
 func unmarshalMap(data []byte) map[string]interface{} {
@@ -19,6 +24,6 @@ func unmarshalMap(data []byte) map[string]interface{} {
 	if err := json.Unmarshal(data, &m); err != nil {
 		return nil
 	}
-	fmt.Println(m)
+	//fmt.Println(m)
 	return m
 }
