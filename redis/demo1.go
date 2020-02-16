@@ -18,6 +18,31 @@ func main() {
 	//SetRedis()
 
 	GetRedis()
+
+	key := "rank"
+	items := []redis.Z{
+		redis.Z{
+			Score:  99,
+			Member: "golang",
+		},
+		redis.Z{
+			Score:  90,
+			Member: "java",
+		},
+		redis.Z{
+			Score:  80,
+			Member: "php",
+		},
+	}
+
+	redisDb.ZAdd(key, items...)
+
+	newScore, err := redisDb.ZIncrBy(key, 10.0, "golang").Result()
+	if err != nil {
+		fmt.Printf("zincrby failed:%s", err)
+		return
+	}
+	fmt.Println("golang score is: ", newScore)
 }
 
 func initRedis() (err error) {
@@ -41,8 +66,5 @@ func SetRedis() {
 
 func GetRedis() {
 	stringCmd := redisDb.Get("key")
-	fmt.Println(stringCmd.String())
-	fmt.Println(stringCmd.Name())
 	fmt.Println(stringCmd.Val())
-	fmt.Println(stringCmd.Result())
 }
