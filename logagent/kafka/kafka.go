@@ -33,5 +33,6 @@ func SentToKafka(topic, data string) {
 		fmt.Println("send msg failed,err :", err)
 		return
 	}
+	fmt.Println(msg.Value)
 	fmt.Println("pid:", pid, "offset:", offset)
 }
