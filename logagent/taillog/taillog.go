@@ -7,6 +7,7 @@ import (
 
 var (
 	tailObj *tail.Tail
+	LogChan chan string
 )
 
 func Init(fileName string) (err error) {
@@ -23,4 +24,8 @@ func Init(fileName string) (err error) {
 		return err
 	}
 	return
+}
+
+func ReadChan() <-chan *tail.Line {
+	return tailObj.Lines
 }
