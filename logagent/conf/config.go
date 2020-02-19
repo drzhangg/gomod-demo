@@ -13,6 +13,7 @@ type KafkaConfig struct {
 type EtcdConfig struct {
 	Endpoints   string `ini:"endpoints"`
 	DialTimeout int    `ini:"dialtimeout"`
+	LogAgent    string `ini:"collect_log_key"`
 }
 
 //-- unused----
