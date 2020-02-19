@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"gomod-demo/logagent/conf"
+	"gomod-demo/logagent/etcd"
 	"gomod-demo/logagent/kafka"
-	"gomod-demo/logagent/taillog"
 	"gopkg.in/ini.v1"
 )
 
@@ -12,18 +12,17 @@ var (
 	config = new(conf.Config)
 )
 
-func run() {
-	//1.从tail读取日志
-	for {
-		select {
-		case line := <-taillog.ReadChan():
-			//2.把日志写入kafka
-			kafka.SentToKafka(config.Topic, line.Text)
-		default:
-
-		}
-	}
-}
+//func run() {
+//	//1.从tail读取日志
+//	for {
+//		select {
+//		case line := <-taillog.ReadChan():
+//			//2.把日志写入kafka
+//			kafka.SentToKafka(config.Topic, line.Text)
+//		default:
+//		}
+//	}
+//}
 
 //logAgent入口程序
 func main() {
@@ -33,9 +32,6 @@ func main() {
 		fmt.Printf("load ini config file failed, err：%v\n", err)
 		return
 	}
-	fmt.Println(config.Address)
-	fmt.Println(config.Topic)
-	fmt.Println(config.Path)
 
 	//1.初始化kafka连接
 	err = kafka.Init([]string{config.Address})
@@ -45,13 +41,34 @@ func main() {
 	}
 	fmt.Println("init kafka success.")
 
-	//2.打开日志文件准备收集日志
-	err = taillog.Init(config.Path)
+	//2. 初始化etcd配置
+	err = etcd.Init(config.Endpoints, config.DialTimeout)
 	if err != nil {
-		fmt.Printf("init tail log failed,err: %v\n", err)
+		fmt.Println("init etcd failed, err:", err)
 		return
 	}
-	fmt.Println("init taillog success.")
+	fmt.Println("init etcd success.")
 
-	run()
+	//2.1 从etcd中获取日志收集项的配置信息
+	logEntryConf, err := etcd.GetConf("/xxx")
+	if err != nil {
+		fmt.Println("get conf from etcd failed, err:", err)
+		return
+	}
+	fmt.Println("get conf from etcd success")
+	for k, v := range logEntryConf {
+		fmt.Println(k, v.Topic, v.Path)
+	}
+
+	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）
+
+	//2.打开日志文件准备收集日志
+	//err = taillog.Init(config.Path)
+	//if err != nil {
+	//	fmt.Printf("init tail log failed,err: %v\n", err)
+	//	return
+	//}
+	//fmt.Println("init taillog success.")
+
+	//run()
 }

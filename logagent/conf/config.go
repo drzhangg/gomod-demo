@@ -1,8 +1,8 @@
 package conf
 
 type Config struct {
-	KafkaConfig   `ini:"kafka"`
-	TaillogConfig `ini:"taillog"`
+	KafkaConfig `ini:"kafka"`
+	EtcdConfig  `ini:"etcd"`
 }
 
 type KafkaConfig struct {
@@ -10,6 +10,12 @@ type KafkaConfig struct {
 	Topic   string `ini:"topic"`
 }
 
+type EtcdConfig struct {
+	Endpoints   string `ini:"endpoints"`
+	DialTimeout int    `ini:"dialtimeout"`
+}
+
+//-- unused----
 type TaillogConfig struct {
 	Path string `ini:"path"`
 }
