@@ -5,6 +5,7 @@ import (
 	"gomod-demo/logagent/conf"
 	"gomod-demo/logagent/etcd"
 	"gomod-demo/logagent/kafka"
+	"gomod-demo/logagent/taillog"
 	"gopkg.in/ini.v1"
 )
 
@@ -51,6 +52,7 @@ func main() {
 
 	//2.1 从etcd中获取日志收集项的配置信息
 	logEntryConf, err := etcd.GetConf(config.LogAgent)
+	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）
 	if err != nil {
 		fmt.Println("get conf from etcd failed, err:", err)
 		return
@@ -60,15 +62,8 @@ func main() {
 		fmt.Println(k, v.Topic, v.Path)
 	}
 
-	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）
-
-	//2.打开日志文件准备收集日志
-	//err = taillog.Init(config.Path)
-	//if err != nil {
-	//	fmt.Printf("init tail log failed,err: %v\n", err)
-	//	return
-	//}
-	//fmt.Println("init taillog success.")
-
+	//3. 收集日志发往kafka
+	//3.1 循环每一个日志收集项
+	taillog.Init(logEntryConf)
 	//run()
 }
