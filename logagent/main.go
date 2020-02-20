@@ -35,7 +35,7 @@ func main() {
 	}
 
 	//1.初始化kafka连接
-	err = kafka.Init([]string{config.Address})
+	err = kafka.Init([]string{config.Address}, config.ChanMaxSize)
 	if err != nil {
 		fmt.Printf("init kafka failed, err: %v\n", err)
 		return

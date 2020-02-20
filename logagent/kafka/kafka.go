@@ -16,7 +16,7 @@ var (
 	logDataChan chan *logData
 )
 
-func Init(addr []string) (err error) {
+func Init(addr []string, maxSize int) (err error) {
 	config := sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForAll          //发送完需要leader和follower都确认
 	config.Producer.Partitioner = sarama.NewRandomPartitioner //新选出一个partition分区
@@ -27,6 +27,10 @@ func Init(addr []string) (err error) {
 		fmt.Println("producer closed,err:", err)
 		return err
 	}
+	// 初始化logDataChan
+	logDataChan = make(chan *logData, maxSize)
+	//开启后台的goroutine从通道中取数据发往kafka
+	go SendToKafka()
 	return nil
 }
 
@@ -40,7 +44,7 @@ func SendToChan(topic, data string) {
 }
 
 // 真正往kafka发送日志的函数
-func SentToKafka(topic, data string) {
+func SendToKafka() {
 	for {
 		select {
 		case ld := <-logDataChan:

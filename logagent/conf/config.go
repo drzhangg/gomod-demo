@@ -6,8 +6,8 @@ type Config struct {
 }
 
 type KafkaConfig struct {
-	Address string `ini:"address"`
-	Topic   string `ini:"topic"`
+	Address     string `ini:"address"`
+	ChanMaxSize int    `ini:"chan_max_size"`
 }
 
 type EtcdConfig struct {
