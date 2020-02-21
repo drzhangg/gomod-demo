@@ -52,12 +52,24 @@ func main() {
 
 	//2.1 从etcd中获取日志收集项的配置信息
 	logEntryConf, err := etcd.GetConf(config.LogAgent)
-	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）
 	if err != nil {
 		fmt.Println("get conf from etcd failed, err:", err)
 		return
 	}
 	fmt.Println("get conf from etcd success")
+
+	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）etcd watch
+	/*
+	从etcd中获取配置信息后，启动一个goroutine去监听etcd，当有一个新的配置文件在etcd里面设置的话，通知到taillog
+	etcd watch一直监听配置文件的变化	topic：指定的kafka名称  path：日志的路径
+	变化有：
+	1.新增配置文件
+	2.删除配置文件
+	3.修改配置文件
+	 */
+	newConf := []*etcd.LogEntry
+	go etcd.WatchConf(config.LogAgent,newConf)
+
 	for k, v := range logEntryConf {
 		fmt.Println(k, v.Topic, v.Path)
 	}

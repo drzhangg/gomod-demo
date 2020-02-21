@@ -47,3 +47,27 @@ func GetConf(key string) (logEntryConf []*LogEntry, err error) {
 	}
 	return logEntryConf, nil
 }
+
+// 用来监听kafka里面的配置文件是否要变动
+func WatchConf(key string, newConfCh chan<- []*LogEntry) {
+	watchCh := client.Watch(context.Background(), key)
+	//从通道尝试取值（etcd监视的信息）
+	for v := range watchCh {
+		for _, ev := range v.Events {
+			fmt.Printf("Type:%v key:%v value:%v\n", ev.Type, string(ev.Kv.Key), string(ev.Kv.Value))
+
+			var newConf []*LogEntry
+			// 判断操作类型，如果是删除配置操作，则返回空的结构体
+			if ev.Type != clientv3.EventTypeDelete {
+				if err := json.Unmarshal(ev.Kv.Value, &newConf); err != nil {
+					fmt.Printf("unmarshal failed, err:%v\n", err)
+					continue
+				}
+			}
+
+			fmt.Printf(" get new conf:%v\n", newConf)
+			// 取得了信息的变化，通过一个通道把变化的信息发送出去
+			newConfCh <- newConf
+		}
+	}
+}
