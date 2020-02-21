@@ -7,6 +7,7 @@ import (
 	"gomod-demo/logagent/kafka"
 	"gomod-demo/logagent/taillog"
 	"gopkg.in/ini.v1"
+	"sync"
 )
 
 var (
@@ -58,24 +59,31 @@ func main() {
 	}
 	fmt.Println("get conf from etcd success")
 
-	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）etcd watch
-	/*
-	从etcd中获取配置信息后，启动一个goroutine去监听etcd，当有一个新的配置文件在etcd里面设置的话，通知到taillog
-	etcd watch一直监听配置文件的变化	topic：指定的kafka名称  path：日志的路径
-	变化有：
-	1.新增配置文件
-	2.删除配置文件
-	3.修改配置文件
-	 */
-	newConf := []*etcd.LogEntry
-	go etcd.WatchConf(config.LogAgent,newConf)
-
 	for k, v := range logEntryConf {
 		fmt.Println(k, v.Topic, v.Path)
 	}
 
+
 	//3. 收集日志发往kafka
 	//3.1 循环每一个日志收集项
 	taillog.Init(logEntryConf)
+
+	//2.2 派一个哨兵去监视日志收集项的变化（有变化及时通知我的logAgent实现热加载配置）etcd watch
+	/*
+		从etcd中获取配置信息后，启动一个goroutine去监听etcd，当有一个新的配置文件在etcd里面设置的话，通知到taillog
+		难点：etcd拿到配置文件的时候把数据发送给taillog   通过管道
+		etcd watch一直监听配置文件的变化	topic：指定的kafka名称  path：日志的路径
+		变化有：
+		1.新增配置文件
+		2.删除配置文件
+		3.修改配置文件
+	*/
+	newConf := taillog.NewConfChan()
+	//启动etcd的监听程序
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go etcd.WatchConf(config.LogAgent, newConf)
+	wg.Wait()
+
 	//run()
 }
