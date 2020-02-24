@@ -24,10 +24,12 @@ require (
 	github.com/golang/protobuf v1.3.2
 	github.com/google/uuid v1.1.1 // indirect
 	github.com/hpcloud/tail v1.0.0
+	github.com/jinzhu/gorm v1.9.12 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/klauspost/cpuid v1.2.2 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
-	github.com/olivere/elastic v6.2.26+incompatible
+	github.com/olivere/elastic v6.2.27+incompatible
+	github.com/robfig/cron v1.2.0 // indirect
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/temoto/robotstxt v1.1.1 // indirect
 	github.com/valyala/fasthttp v1.8.0
