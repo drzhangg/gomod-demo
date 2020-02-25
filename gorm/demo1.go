@@ -2,15 +2,17 @@ package main
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"strings"
 )
 
 type Demo struct {
-	Id     int64  `json:"id",db:"id,omitempty"`
-	Name   string `json:"name",db:"name,omitempty"`
-	Age    int    `json:"age",db:"age,omitempty"`
-	Salary int    `db:"salary,omitempty"`
+	Id     int64    `json:"id",db:"id,omitempty"`
+	Name   []string `json:"name",db:"name,omitempty"`
+	Age    int      `json:"age",db:"age,omitempty"`
+	Salary int      `db:"salary,omitempty"`
 }
 
 var (
@@ -23,54 +25,31 @@ func main() {
 		fmt.Println(err)
 	}
 
-	demo := new(Demo)
-	rows, err := db.Query("select * from people")
+	rows, err := db.Query("select name from people where id =1")
 	if err != nil {
 		fmt.Printf("Scan failed,err:%v", err)
 	}
 
-	columns, err := rows.Columns()
-	if err != nil {
-		fmt.Println(err)
-	}
-
-
-
-	values := make([]sql.RawBytes, len(columns))
-	scanArgs := make([]interface{}, len(values))
-	for i := range values {
-		scanArgs[i] = &values[i]
-	}
-
-	//err = rows.Scan(&demo.Name, &demo.Age, &demo.Salary, &demo.Id)
-	//if err != nil {
-	//	fmt.Printf("Scan failed,err:%v", err)
-	//}
-	//fmt.Println(*demo)
-
+	var name string
 	for rows.Next() {
-		//err = rows.Scan(&demo.Name, &demo.Age, &demo.Salary, &demo.Id)
-		err = rows.Scan(scanArgs...)
-		if err != nil {
+		if err := rows.Scan(&name); err != nil {
 			fmt.Printf("Scan failed,err:%v", err)
 		}
-
-		var value string
-		for i,col := range values{
-			if col == nil{
-				value = "null"
-			}else {
-				value = string(col)
-			}
-			fmt.Println(columns[i], ": ", value)
-		}
-
-
-
-		fmt.Println(*demo)
 	}
+	fmt.Println(name)
 
-	if err = rows.Err(); err != nil {
-		panic(err.Error()) // proper error handling instead of panic in your app
+	arr := strings.Split(name, ",")
+	fmt.Println(arr)
+
+	bytes, err := json.Marshal(&Demo{
+		Id:     0,
+		Name:   arr,
+		Age:    0,
+		Salary: 0,
+	})
+	if err != nil {
+		fmt.Printf("json marshal failed,err:%v", err)
 	}
+	fmt.Println(string(bytes))
+
 }
