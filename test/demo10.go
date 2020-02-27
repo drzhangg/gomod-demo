@@ -18,7 +18,7 @@ func InitOption(opts ...Option) {
 	for _, opt := range opts {
 		opt(option)
 	}
-	fmt.Printf("init options %#v\n", option)
+	fmt.Printf("init options %#v\n",option)
 }
 
 func WithOptionString1(str string) Option {
@@ -34,5 +34,11 @@ func WithOptionString2(str string) Option {
 }
 
 func main() {
-	InitOption(WithOptionString1("jerry"), WithOptionString2("tom"))
+	//InitOption(WithOptionString1("jerry"),Wi)
+
+	dst := make(chan int)
+	dst <- 1
+	<- dst
+	fmt.Println(len(dst))
+	fmt.Println(cap(dst))
 }
