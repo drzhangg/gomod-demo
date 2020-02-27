@@ -27,6 +27,7 @@ require (
 	github.com/jinzhu/gorm v1.9.12 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/klauspost/cpuid v1.2.2 // indirect
+	github.com/lifei6671/gorand v0.1.0 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/olivere/elastic v6.2.27+incompatible
 	github.com/robfig/cron v1.2.0 // indirect
