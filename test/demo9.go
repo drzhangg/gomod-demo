@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"runtime"
 )
 
 type Login struct {
@@ -25,6 +26,7 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"msg": login})
 	})
 
+	runtime.LockOSThread()
 
 
 	router.Run(":8080")
