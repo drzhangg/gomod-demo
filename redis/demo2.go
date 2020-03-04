@@ -18,4 +18,6 @@ func main() {
 
 	scmd := client.HGet("htest", "b")
 	fmt.Println(scmd.String())
+
+	client.LSet()
 }
