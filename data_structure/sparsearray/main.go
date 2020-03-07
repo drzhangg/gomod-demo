@@ -42,7 +42,7 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(len(nodes))
+	//fmt.Println(len(nodes))
 
 	filename := "chessmap.data"
 	file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0666)
@@ -65,5 +65,19 @@ func main() {
 		//_ = ioutil.WriteFile(filename, bytes, 0666)
 	}
 
+	//将稀疏数组转成二维数组
+	var chessMap2 [11][11]int
 
+	for _, v := range nodes {
+		//fmt.Println(i,v)
+		chessMap2[v.row][v.low] = v.val
+	}
+	//chessMap2 = chessMap2
+	for _, i := range chessMap2 {
+		for _, j := range i {
+			fmt.Printf("%d   ", j)
+		}
+		fmt.Println()
+	}
+	//fmt.Println(chessMap2)
 }
