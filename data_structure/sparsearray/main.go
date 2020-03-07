@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 type Node struct {
 	row int //行
@@ -16,12 +20,12 @@ func main() {
 	chessMap[2][3] = 1
 
 	//打印二维数组
-	for _, v := range chessMap {
-		for _, k := range v {
-			fmt.Printf("%d  ", k)
-		}
-		fmt.Println()
-	}
+	//for _, v := range chessMap {
+	//	for _, k := range v {
+	//		fmt.Printf("%d  ", k)
+	//	}
+	//	fmt.Println()
+	//}
 
 	var nodes []Node
 	var node Node
@@ -38,10 +42,28 @@ func main() {
 			}
 		}
 	}
+	fmt.Println(len(nodes))
 
-	for i, v := range nodes {
-		fmt.Printf("%d：%d  %d  %d\n", i, v.row, v.low, v.val)
+	filename := "chessmap.data"
+	file, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0666)
+	if err != nil {
+		fmt.Println("open file failed,err:", err.Error())
+		return
+	}
+	defer file.Close()
+
+	writer := bufio.NewWriter(file)
+
+	for _, v := range nodes {
+
+		bytes := []byte(fmt.Sprintf("%v", v))
+		for i := 0; i < len(nodes); i++ {
+			writer.Write(bytes)
+			writer.WriteString("\n")
+		}
+		writer.Flush()
+		//_ = ioutil.WriteFile(filename, bytes, 0666)
 	}
 
-	fmt.Println(nodes)
+
 }
