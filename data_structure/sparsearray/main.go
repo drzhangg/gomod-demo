@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
+	"time"
 )
 
 type Node struct {
@@ -79,5 +81,9 @@ func main() {
 		}
 		fmt.Println()
 	}
+
+	fmt.Printf("%v", 10*time.Second)
+
+	fmt.Println(strings.ToLower("Abcd"))
 	//fmt.Println(chessMap2)
 }
