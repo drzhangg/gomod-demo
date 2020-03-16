@@ -5,6 +5,11 @@ import (
 	"fmt"
 )
 
+const SingleName  = "jerry"
+
+var Vname = "tom"
+
+
 type Test2 struct {
 	Timestamp string `json:"timestamp"`
 	Value     float64
@@ -24,4 +29,7 @@ func main() {
 	}
 
 	fmt.Println(m)
+
+
+
 }

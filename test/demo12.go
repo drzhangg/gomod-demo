@@ -18,4 +18,7 @@ func main() {
 	defer calc("2", a, calc("20", a, b))
 	b = 1
 
+
+	fmt.Println(Vname)
+
 }

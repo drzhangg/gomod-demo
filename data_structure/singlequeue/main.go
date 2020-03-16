@@ -41,7 +41,7 @@ func (q *Queue) GetQueue() (val int, err error) {
 	//当取出一个值时，front值要往前移
 	q.front++
 	val = q.array[q.front]
-	return val, nil
+	return val,nil
 }
 
 //显示队列中的数据

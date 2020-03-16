@@ -8,8 +8,11 @@ import (
 	"time"
 )
 
+const Cname  = "bob"
+
 var (
 	client *clientv3.Client
+	Tstring string
 )
 
 type LogEntry struct {
