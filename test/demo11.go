@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"runtime"
 )
 
 const SingleName  = "jerry"
@@ -31,5 +32,5 @@ func main() {
 	fmt.Println(m)
 
 
-
+	runtime.LockOSThread()
 }
