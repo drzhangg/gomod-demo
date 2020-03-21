@@ -24,15 +24,15 @@ func main() {
 	//读数据
 	var clen int
 	for {
-		myTimer := time.NewTimer(2 * time.Second)
+		//myTimer := time.NewTimer(2 * time.Second)
 
 		clen = len(ch)
 		if clen >= 10 {
 			insert(ch)
 		} else {
 			select {
-			case <-myTimer.C:
-				myTimer.Reset(time.Second * 2)
+			case <-time.After(time.Second * 2):
+				//myTimer.Reset(time.Second * 2)
 				insert(ch)
 			//case <-quit:
 				//return
