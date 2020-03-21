@@ -2,58 +2,42 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"sync"
-	"time"
 )
 
-var cal sync.Cond
+var sg sync.WaitGroup
 
-//消费者，读数据
-func consumer(out <-chan int, idx int) {
-	for {
-		cal.L.Lock()
-
-		for len(out) == 0 { //当缓冲区的数据取完时候，阻塞，直到有数据写入
-			cal.Wait() //挂起当前协程
-		}
-		num := <-out
-		fmt.Printf("%dth消费者，消费数据%3d，公共区域剩余%d个数据\n", idx, num, len(out))
-		cal.L.Unlock()
-		cal.Signal() //唤醒当前协程
+//任务生成器
+func create_task(ch chan int) {
+	sg.Wait()
+	for i := 0; i < 5; i++ {
+		ch <- i
 	}
+	//close(ch)
 }
 
-//生产者，写数据
-func producer(in chan<- int, idx int) {
-	for {
-		cal.L.Lock()
-
-		for len(in) == 3 { //当缓冲区的数据存满时，阻塞，等待消费者取出数据
-			cal.Wait()
+//任务执行器
+func handle_task(in chan int, out chan int) {
+	if len(in) != 0 {
+		for temp := range in {
+			out <- temp * temp
 		}
-		num := rand.Intn(1000)
-		in <- num
-		fmt.Printf("%dth生产者，产生数据%3d，公共区域剩余%d个数据\n", idx, num, len(in))
-		cal.L.Unlock()
-		cal.Signal()
-		time.Sleep(time.Second)
+	} else {
+		out <- 0
 	}
+	//close(out)
 }
-
 func main() {
-	ch := make(chan int, 3)
-	quit := make(chan bool)
-
-	cal.L = new(sync.RWMutex)
+	in := make(chan int)
+	out := make(chan int)
 
 	for i := 0; i < 5; i++ {
-		go producer(ch, i+1)
+		go create_task(in)
 	}
 
-	for i := 0; i < 5; i++ {
-		go consumer(ch, i+1)
-	}
+	go handle_task(in, out)
 
-	quit <- true
+	for r := range out {
+		fmt.Println(r)
+	}
 }

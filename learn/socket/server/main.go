@@ -26,7 +26,7 @@ func main() {
 
 	fmt.Println("服务端连接成功！")
 
-	bytes := []byte{}
+	bytes := make([]byte, 4096)
 	n, err := conn.Read(bytes)
 	if err != nil {
 		fmt.Println("conn.Read err:", err)

@@ -27,7 +27,7 @@ func main() {
 			fmt.Println(err)
 			continue
 		}
-		fmt.Println("A client connect : ", tcpConn.RemoteAddr().String())
+		fmt.Println("A server connect : ", tcpConn.RemoteAddr().String())
 		go tcpPipe(tcpConn)
 	}
 }

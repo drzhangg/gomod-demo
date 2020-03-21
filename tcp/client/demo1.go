@@ -19,7 +19,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	fmt.Println(conn.LocalAddr().String() + " :client connected!")
+	fmt.Println(conn.LocalAddr().String() + " :server connected!")
 }
 
 func onMessageReceived(conn *net.TCPConn) {
