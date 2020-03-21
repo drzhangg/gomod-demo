@@ -2,6 +2,10 @@ package registry
 
 import "time"
 
+/*
+	选项设计模式，用来提供多组件方法
+*/
+
 type Options struct {
 	Addrs        []string      //地址
 	Timeout      time.Duration //超时时间

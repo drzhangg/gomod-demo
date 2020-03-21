@@ -36,6 +36,11 @@ func HandleAcc(conn net.Conn) {
 			fmt.Println("conn.Read err:", err)
 			return
 		}
+
+		if n == 0 {
+			fmt.Println("服务器数据为空")
+			return
+		}
 		fmt.Println("服务器读到数据：", string(buf[:n]))
 
 		conn.Write([]byte(strings.ToUpper(string(buf[:n]))))
