@@ -42,6 +42,19 @@ func WithOptionString3(str string) Option {
 func main() {
 	InitOption(WithOptionString1("jerry"), WithOptionString2("bob"))
 
+	op := &Options{
+		OptionString1: "1",
+		OptionString2: "2",
+		OptionString3: "3",
+		OptionInt1:    1,
+		OptionInt2:    2,
+		OptionInt3:    3,
+	}
+	op = op
+	//a := func(opts *Options) {
+	//	return op
+	//}
+
 	//dst := make(chan int)
 	//dst <- 1
 	//<- dst
