@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "pb";
+
+package user;
+
+service user {
+    rpc GetUserInfo (GetUserReq) returns (GetUserRsp) {
+    }
+}
+
+message GetUserReq {
+    string name = 1;
+}
+
+message GetUserRsp {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+    repeated string hobby = 4;
+}
+

@@ -44,17 +44,9 @@ var (
 //初始化etcd方法
 func init() {
 
+	//
 }
 
-//循环操作
-func (e *EtcdRegistry) run() {
-
-}
-
-// 
-func (e *EtcdRegistry) syncServiceFromEtcd() {
-
-}
 
 //插件名字	实现接口
 func (e *EtcdRegistry) Name() string {
@@ -90,5 +82,47 @@ func (e *EtcdRegistry) UnRegister(ctx context.Context, service *registry.Service
 
 //服务发现	实现接口
 func (e *EtcdRegistry) GetService(ctx context.Context, name string) (service *registry.Service, err error) {
+
+}
+
+
+//-----内部调用函数-----
+
+//循环操作
+func (e *EtcdRegistry) run() {
+
+}
+
+
+//异步从etcd获取服务信息
+func (e *EtcdRegistry) syncServiceFromEtcd() {
+
+}
+
+//
+func (e *EtcdRegistry) servicePath(name string) string {
+
+}
+
+//注册服务或续租
+func (e *EtcdRegistry) registerOrKeepAlive() {
+
+}
+
+//保持连接
+func (e *EtcdRegistry) keepAlive(registryService *RegisterService) {
+
+}
+
+func (e *EtcdRegistry) registerService(registryService *RegisterService) (err error) {
+
+}
+
+func (e *EtcdRegistry) serviceNodePath(service *registry.Registry) string {
+
+}
+
+//根据服务名称，从缓存中获取服务数据
+func (e *EtcdRegistry) getServiceFromCache(ctx context.Context, name string) (service *registry.Registry, ok bool) {
 
 }
