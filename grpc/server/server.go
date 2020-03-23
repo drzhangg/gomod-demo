@@ -15,12 +15,12 @@ import (
 3.注册grpc
 */
 
-type GetUserReq struct {
+type UserServer struct {
 }
 
-//var
+//var u = UserServer{}
 
-func GetUserInfo(ctx context.Context, req *pb.GetUserReq) (rsp *pb.GetUserRsp, err error) {
+func (u *UserServer) GetUserInfo(ctx context.Context, req *pb.GetUserReq) (rsp *pb.GetUserRsp, err error) {
 	name := req.Name
 
 	if name != "" {
@@ -41,6 +41,11 @@ func main() {
 		fmt.Printf("监听异常：%s\n", err)
 	}
 
+	fmt.Println("正在监听grpc服务...")
 	s := grpc.NewServer()
-	pb.RegisterUserServer(s,&GetUserReq{})
+
+	//注册grpc服务
+	pb.RegisterUserServer(s, &UserServer{})
+
+	s.Serve(listener)
 }
