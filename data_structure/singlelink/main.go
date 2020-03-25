@@ -27,6 +27,33 @@ func InsertHeroNode(head *HeroNode, newNode *HeroNode) {
 	temp.next = newNode
 }
 
+// 根据输入的链表编号，从小到大依次插入
+func InsertNode(head *HeroNode, newNode *HeroNode) {
+	temp := head
+	flag := true
+
+	for {
+		if temp.next == nil { //说明是最后一个节点
+			break
+		} else if temp.next.id > newNode.id { //说明newNode应该在head的前面
+			break
+		} else if temp.next.id == newNode.id {
+			flag = false
+			break
+		}
+
+		temp = temp.next //将新节点的值赋到next上，以此新增
+	}
+
+	if !flag {
+		fmt.Printf("对不起，该id已经存在:%d", newNode.id)
+		return
+	} else {
+		newNode.next = temp.next
+		temp.next = newNode
+	}
+}
+
 //显示链表的所有信息
 func ListHeroNode(head *HeroNode) {
 	/*
@@ -63,8 +90,17 @@ func main() {
 		nickname: "cat",
 	}
 
-	InsertHeroNode(node, temp1)
-	InsertHeroNode(node, temp2)
+	temp3 := &HeroNode{
+		id:       3,
+		name:     "houser",
+		nickname: "女主人",
+	}
+
+	//InsertHeroNode(node, temp1)
+	//InsertHeroNode(node, temp2)
+	InsertNode(node,temp2)
+	InsertNode(node,temp3)
+	InsertNode(node,temp1)
 
 	ListHeroNode(node)
 
