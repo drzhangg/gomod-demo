@@ -8,6 +8,7 @@ import (
 )
 
 type Greeter struct {
+	Name string
 }
 
 func (g *Greeter) Hello(ctx context.Context, in *pb.Request, out *pb.Response) error {
@@ -33,7 +34,7 @@ func main() {
 	service.Init()
 
 
-	pb.RegisterGreeterHandler(service.Server(),&Greeter{})
+	pb.RegisterGreeterHandler(service.Server(),&Greeter{"zhang"})
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
