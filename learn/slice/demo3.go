@@ -13,4 +13,5 @@ func main() {
 	fmt.Printf("%p\n",b)
 	fmt.Println(len(a), cap(a))
 	fmt.Println(len(b), cap(b))
+
 }
