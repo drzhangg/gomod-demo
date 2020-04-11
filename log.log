@@ -1,0 +1,377 @@
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.027s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /student/class/133 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Length: 62
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/133 [status:404, request:0.015s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /student/class/133 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Length: 62
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/133 [status:404, request:0.020s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/133 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"133","found":false}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.025s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.054s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.020s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.014s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.010s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.017s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.029s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.016s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.017s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.028s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.018s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.023s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.015s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.017s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.038s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.048s]
+ES-TRACE: HEAD /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 157
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: HEAD http://47.103.9.218:9200/student/class/1 [status:200, request:0.023s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /student/class/1 HTTP/1.1
+Host: 47.103.9.218:9200
+User-Agent: elastic/6.2.27 (darwin-amd64)
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"student","_type":"class","_id":"1","_version":2,"_seq_no":2,"_primary_term":1,"found":true,"_source":{
+	"name":"jerry",
+	"age":22,
+	"score":100
+}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.3.0-de777fa "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://47.103.9.218:9200/student/class/1 [status:200, request:0.015s]

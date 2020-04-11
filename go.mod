@@ -16,7 +16,7 @@ require (
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-log/log v0.2.0
 	github.com/go-redis/redis v6.15.7+incompatible
-	github.com/go-sql-driver/mysql v1.4.1
+	github.com/go-sql-driver/mysql v1.5.0
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gocolly/colly v1.2.0
 	github.com/gogo/protobuf v1.3.1 // indirect
@@ -28,11 +28,11 @@ require (
 	github.com/hpcloud/tail v1.0.0
 	github.com/jinzhu/gorm v1.9.12
 	github.com/kennygrant/sanitize v1.2.4 // indirect
-	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/micro/go-micro v1.18.0
 	github.com/micro/protoc-gen-micro v1.0.0
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/olivere/elastic v6.2.27+incompatible
+	github.com/olivere/elastic/v7 v7.0.13 // indirect
 	github.com/onsi/ginkgo v1.12.0 // indirect
 	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/prometheus/client_golang v1.5.1 // indirect
