@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learn/array/demo3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn/channel/demo10.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spider/bili/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
       <recent name="$PROJECT_DIR$/spider/12306/demo1" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/array">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/spider/bili">
     <configuration name="go build gomod-demo/elasticsearch" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -96,22 +98,22 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/micro/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/spider/bili" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/micro/client/main.go" />
-      <package value="gomod-demo/micro/client" />
+      <filePath value="$PROJECT_DIR$/spider/bili/main.go" />
+      <package value="gomod-demo/spider/bili" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/spider/bili" />
         <item itemvalue="Go Build.go build gomod-demo/learn/array" />
         <item itemvalue="Go Build.go build gomod-demo/learn/channel" />
         <item itemvalue="Go Build.go build gomod-demo/elasticsearch" />
         <item itemvalue="Go Build.go build gomod-demo/learn/slice" />
-        <item itemvalue="Go Build.go build gomod-demo/micro/client" />
       </list>
     </recent_temporary>
   </component>
@@ -148,22 +150,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/learn/channel/0.23.1440.877@0.23.1440.877" timestamp="1587003558436" />
-    <state width="1398" height="226" key="GridCell.Tab.0.bottom" timestamp="1587009750296">
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom" timestamp="1587042579054">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587009750296" />
-    <state width="1398" height="226" key="GridCell.Tab.0.center" timestamp="1587009750292">
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587042579054" />
+    <state width="1398" height="226" key="GridCell.Tab.0.center" timestamp="1587042579052">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587009750292" />
-    <state width="1398" height="226" key="GridCell.Tab.0.left" timestamp="1587009750290">
+    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587042579052" />
+    <state width="1398" height="226" key="GridCell.Tab.0.left" timestamp="1587042579049">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587009750290" />
-    <state width="1398" height="226" key="GridCell.Tab.0.right" timestamp="1587009750295">
+    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587042579049" />
+    <state width="1398" height="226" key="GridCell.Tab.0.right" timestamp="1587042579052">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587009750295" />
+    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587042579052" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

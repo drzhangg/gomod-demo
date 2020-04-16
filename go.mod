@@ -3,7 +3,7 @@ module gomod-demo
 go 1.12
 
 require (
-	github.com/PuerkitoBio/goquery v1.5.0
+	github.com/PuerkitoBio/goquery v1.5.1
 	github.com/Shopify/sarama v1.26.1
 	github.com/antchfx/htmlquery v1.2.0 // indirect
 	github.com/antchfx/xmlquery v1.2.1 // indirect
@@ -17,7 +17,6 @@ require (
 	github.com/go-log/log v0.2.0
 	github.com/go-redis/redis v6.15.7+incompatible
 	github.com/go-sql-driver/mysql v1.5.0
-	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gocolly/colly v1.2.0
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/groupcache v0.0.0-20191027212112-611e8accdfc9 // indirect
@@ -33,18 +32,17 @@ require (
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/olivere/elastic v6.2.27+incompatible
 	github.com/olivere/elastic/v7 v7.0.13 // indirect
-	github.com/onsi/ginkgo v1.12.0 // indirect
-	github.com/onsi/gomega v1.9.0 // indirect
 	github.com/prometheus/client_golang v1.5.1 // indirect
-	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/temoto/robotstxt v1.1.1 // indirect
+	github.com/tidwall/pretty v1.0.1 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200122045848-3419fae592fc // indirect
 	github.com/valyala/fasthttp v1.8.0
+	github.com/zhshch2002/goribot v0.1.2
 	go.etcd.io/etcd v3.3.18+incompatible
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59 // indirect
-	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
+	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	google.golang.org/grpc v1.26.0
 	gopkg.in/ini.v1 v1.52.0
 	sigs.k8s.io/yaml v1.2.0 // indirect
