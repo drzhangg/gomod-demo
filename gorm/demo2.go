@@ -1,130 +1,56 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/jinzhu/gorm"
 )
 
 type User struct {
-	Id       int    `db:"id"`
-	UserName string `db:"username"`
-	PassWord string `db:"password"`
+	Name string `db:"name"`
+	Age  int64  `db:"age"`
 }
 
 //root:root@tcp(localhost:3306)/demo
+//root:root@tcp(47.103.9.218:3306)/test1?charset=utf8
 const (
 	username = "root"
 	password = "root"
 	network  = "tcp"
-	server   = "localhost"
+	server   = "47.103.9.218"
 	port     = 3306
-	database = "demo"
+	database = "test1"
 )
 
 func main() {
-	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@%s(%s:%d)/%s", username, password, network, server, port, database))
+	//db, err := gorm.Open("mysql", fmt.Sprintf("%s:%s@%s(%s:%d)/%s", username, password, network, server, port, database))
+
+	db, err := gorm.Open("mysql", "root:root@(47.103.9.218:3306)/test1?charset=utf8")
 	if err != nil {
 		fmt.Printf("Open mysql failed,err:%v\n", err)
 		return
 	}
 	defer db.Close()
 
+	fmt.Println(db.DB().Ping())
+
+	db.SingularTable(true)
+	db.LogMode(true)
+
 	QueryOne(db)
-	Querys(db)
 	Insert(db)
-	Update(db)
-	delete(db)
 }
 
 //Query
-func QueryOne(db *sql.DB) {
-	user := new(User)
-	var sql = `select * from user where id = ?`
-	rows := db.QueryRow(sql, 1)
+func QueryOne(db *gorm.DB) {
+	var user User
+	//db.Find(&user)
+	db.Raw("select name,age from user where name = ?", "jerry").Scan(&user)
 
-	if err := rows.Scan(&user.Id, &user.UserName, &user.PassWord); err != nil {
-		fmt.Printf("scan failed, err:%v", err)
-		return
-	}
-	fmt.Println(*user)
+	fmt.Println(user)
 }
 
-//Querys
-func Querys(db *sql.DB) {
-	user := new(User)
-	users := []User{}
-	rows, err := db.Query("select * from user ")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	for rows.Next() {
-		err = rows.Scan(&user.Id, &user.PassWord, &user.UserName)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		//fmt.Println(*user)
-		users = append(users, *user)
-	}
-	fmt.Println(users)
-}
-
-//insert
-func Insert(db *sql.DB) {
-	var sql = `insert into user(username,password) values ('%s','%s')`
-	sql = fmt.Sprintf(sql, "zhang", "123456")
-	fmt.Println(sql)
-	result, err := db.Exec(sql)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	lastInsertId, err := result.LastInsertId()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println("lastInserId:", lastInsertId)
-
-	rowsAffected, err := result.RowsAffected()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println("rowsAffected:", rowsAffected)
-}
-
-//update
-func Update(db *sql.DB) {
-	var sql = `update user set password = '%s' where id = %d`
-	sql = fmt.Sprintf(sql, "root", 1)
-	result, err := db.Exec(sql)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	rowsaffected, err := result.RowsAffected()
-	if err != nil {
-		fmt.Printf("Get RowsAffected failed,err:%v", err)
-		return
-	}
-	fmt.Println("RowsAffected:", rowsaffected)
-}
-
-//delete
-func delete(db *sql.DB) {
-	var sql = `delete from user where username='%s'`
-	sql = fmt.Sprintf(sql, "zhang")
-	result, err := db.Exec(sql)
-	rowsaffected, err := result.RowsAffected()
-	if err != nil {
-		fmt.Printf("Get RowsAffected failed,err:%v", err)
-		return
-	}
-	fmt.Println("RowsAffected:", rowsaffected)
+func Insert(db *gorm.DB) {
+	sql := `insert into user (name,age) value (?,?)`
+	db.Exec(sql, "tom", 30)
 }
