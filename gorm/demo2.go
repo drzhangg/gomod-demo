@@ -12,7 +12,6 @@ type User struct {
 }
 
 //root:root@tcp(localhost:3306)/demo
-//root:root@tcp(47.103.9.218:3306)/test1?charset=utf8
 const (
 	username = "root"
 	password = "root"
