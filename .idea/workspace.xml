@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learn/json/demo5.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/channel/demo11.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorm/demo2.go" beforeDir="false" afterPath="$PROJECT_DIR$/gorm/demo2.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <recent name="$PROJECT_DIR$/spider/12306/demo1" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/json (1)">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/channel">
     <configuration name="go build gomod-demo/gorm" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -70,12 +69,12 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/learn/array" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/learn/channel" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/learn/array/demo3.go" />
-      <package value="gomod-demo/learn/array" />
+      <filePath value="$PROJECT_DIR$/learn/channel/demo11.go" />
+      <package value="gomod-demo/learn/channel" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -108,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/learn/channel" />
         <item itemvalue="Go Build.go build gomod-demo/learn/json (1)" />
         <item itemvalue="Go Build.go build gomod-demo/learn/json" />
         <item itemvalue="Go Build.go build gomod-demo/gorm" />
         <item itemvalue="Go Build.go build gomod-demo/spider/bili" />
-        <item itemvalue="Go Build.go build gomod-demo/learn/array" />
       </list>
     </recent_temporary>
   </component>
@@ -149,10 +148,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/learn/array/0.23.1440.877@0.23.1440.877" timestamp="1587009747083" />
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/channel" timestamp="1587003558436">
+    <state x="417" y="108" key="#go_build_gomod-demo/learn/channel" timestamp="1587967503215">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/channel/0.23.1440.877@0.23.1440.877" timestamp="1587003558436" />
+    <state x="417" y="108" key="#go_build_gomod-demo/learn/channel/0.23.1440.877@0.23.1440.877" timestamp="1587967503215" />
     <state x="417" y="108" key="#go_build_gomod-demo/learn/json" timestamp="1587115828722">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -161,22 +160,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/learn/json_(1)/0.23.1440.877@0.23.1440.877" timestamp="1587866228380" />
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1587868733050">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1587967579792">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587868733050" />
-    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1587868733048">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587967579792" />
+    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1587967579786">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587868733048" />
-    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1587868733046">
+    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587967579786" />
+    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1587967579783">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587868733046" />
-    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1587868733049">
+    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587967579783" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1587967579789">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587868733049" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587967579788" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
