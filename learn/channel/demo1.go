@@ -1,13 +1,14 @@
 package main
 
-import "fmt"
-
 func main() {
-	ch := make(chan int,1)
-
-	ch <- 8
+	ch1 := make(chan string)
+	ch2 := make(chan string)
 	go func() {
-		fmt.Println(<-ch)
+		<- ch1
+		<- ch2
+
 	}()
 
+	ch2 <- "ch2 value"
+	ch1 <- "ch1 value"
 }
