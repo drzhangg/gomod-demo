@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nsq/producer/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nsq/consumer/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,15 +60,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build gomod-demo/nsq/producer">
-    <configuration name="go build gomod-demo/data_structure/word_search" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gomod-demo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/data_structure/word_search/main.go" />
-      <package value="gomod-demo/data_structure/word_search" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build gomod-demo/learn/channel (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -86,6 +75,15 @@
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/learn/channel/demo1.go" />
       <package value="gomod-demo/learn/channel" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gomod-demo/nsq/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gomod-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/nsq/consumer/main.go" />
+      <package value="gomod-demo/nsq/consumer" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -110,10 +108,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build gomod-demo/nsq/producer" />
+        <item itemvalue="Go Build.go build gomod-demo/nsq/consumer" />
         <item itemvalue="Go Build.go build gomod-demo/learn/channel (2)" />
         <item itemvalue="Go Build.go build gomod-demo/learn/channel (1)" />
         <item itemvalue="Go Build.go build gomod-demo/redis" />
-        <item itemvalue="Go Build.go build gomod-demo/data_structure/word_search" />
       </list>
     </recent_temporary>
   </component>
@@ -178,22 +176,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/redis/0.23.1440.877@0.23.1440.877" timestamp="1588072063408" />
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1588832422690">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1588833949952">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588832422690" />
-    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1588832422689">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588833949952" />
+    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1588833949951">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588832422689" />
-    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1588832422688">
+    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588833949951" />
+    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1588833949950">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588832422688" />
-    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1588832422690">
+    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588833949950" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1588833949951">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588832422690" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588833949951" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1588217927012">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
