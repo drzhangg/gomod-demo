@@ -30,6 +30,7 @@ require (
 	github.com/micro/go-micro v1.18.0
 	github.com/micro/protoc-gen-micro v1.0.0
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
+	github.com/nsqio/go-nsq v1.0.8
 	github.com/olivere/elastic v6.2.27+incompatible
 	github.com/olivere/elastic/v7 v7.0.13 // indirect
 	github.com/prometheus/client_golang v1.5.1 // indirect
