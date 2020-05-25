@@ -1,5 +1,10 @@
 package linklist
 
+import (
+	"fmt"
+	"log"
+)
+
 // Item可以理解为泛型，也就是任意的类型
 type Item interface {
 }
@@ -26,4 +31,22 @@ func (head *LinkNode) Add(payload Item) {
 	//头部插入
 	//newNode := LinkNode{payload,nil}
 	//newNode.Next = head
+}
+
+func NewLinkNode(length int) *LinkNode {
+	if length <= 0 {
+		fmt.Printf("链表长度必须大于0")
+		log.Panic("链表长度必须大于0")
+	}
+	var head *LinkNode
+
+	head = &LinkNode{}
+
+	for i := 0; i < length; i++ {
+		var newNode *LinkNode
+		newNode = &LinkNode{Payload: i}
+		newNode.Next = head
+		head = newNode
+	}
+	return head
 }
