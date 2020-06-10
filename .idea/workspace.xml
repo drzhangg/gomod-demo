@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="" />
+    <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/learn/etcd/demo4.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -30,7 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -56,7 +59,7 @@
       <recent name="$PROJECT_DIR$/spider/12306/demo1" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/data_structure/singlelink">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/etcd">
     <configuration name="go build gomod-demo/data_structure/singlelink" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -66,21 +69,21 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/learn/etcd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/demo/main.go" />
-      <package value="gomod-demo/demo" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/learn/etcd/demo4.go" />
+      <package value="gomod-demo/learn/etcd" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/nsq/producer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/learn/nsq/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/nsq/producer/main.go" />
-      <package value="gomod-demo/nsq/producer" />
+      <filePath value="$PROJECT_DIR$/learn/nsq/consumer/main.go" />
+      <package value="gomod-demo/learn/nsq/consumer" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -106,11 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/learn/etcd" />
+        <item itemvalue="Go Build.go build gomod-demo/learn/nsq/consumer" />
         <item itemvalue="Go Build.go build gomod-demo/data_structure/singlelink" />
         <item itemvalue="Go Test.TestLinkNode_Add in gomod-demo/suanfa/linklist" />
         <item itemvalue="Go Build.go build gomod-demo/suanfa" />
-        <item itemvalue="Go Build.go build gomod-demo/demo" />
-        <item itemvalue="Go Build.go build gomod-demo/nsq/producer" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +166,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/learn/channel_(2)/0.23.1440.877@0.23.1440.877" timestamp="1588410394695" />
+    <state x="417" y="108" key="#go_build_gomod-demo/learn/etcd" timestamp="1590926126951">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="417" y="108" key="#go_build_gomod-demo/learn/etcd/0.23.1440.877@0.23.1440.877" timestamp="1590926126951" />
     <state x="417" y="108" key="#go_build_gomod-demo/learn/json" timestamp="1587115828722">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -175,22 +182,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/redis/0.23.1440.877@0.23.1440.877" timestamp="1588072063408" />
-    <state width="1398" height="194" key="GridCell.Tab.0.bottom" timestamp="1590498635156">
+    <state width="1398" height="194" key="GridCell.Tab.0.bottom" timestamp="1590926263776">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590498635156" />
-    <state width="1398" height="194" key="GridCell.Tab.0.center" timestamp="1590498635155">
+    <state width="1398" height="194" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590926263776" />
+    <state width="1398" height="194" key="GridCell.Tab.0.center" timestamp="1590926263770">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590498635155" />
-    <state width="1398" height="194" key="GridCell.Tab.0.left" timestamp="1590498635154">
+    <state width="1398" height="194" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590926263770" />
+    <state width="1398" height="194" key="GridCell.Tab.0.left" timestamp="1590926263769">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590498635154" />
-    <state width="1398" height="194" key="GridCell.Tab.0.right" timestamp="1590498635156">
+    <state width="1398" height="194" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590926263769" />
+    <state width="1398" height="194" key="GridCell.Tab.0.right" timestamp="1590926263775">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590498635156" />
+    <state width="1398" height="194" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590926263775" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1588217927012">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
