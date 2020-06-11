@@ -1,18 +1,23 @@
 package main
 
-import (
-	"gomod-demo/learn/pprof/data"
-	"log"
-	"net/http"
-	_ "net/http/pprof"
-)
+import "fmt"
 
 func main() {
+	in := make(chan int)
+	//out := make(chan int)
+
 	go func() {
-		for {
-			log.Println(data.Add("https://github.com/drzhangg"))
+		for i := 0; i < 10; i++ {
+			in <- i
 		}
+		close(in)
 	}()
 
-	http.ListenAndServe("0.0.0.0:6060", nil)
+	for i := 0; i < 5; i++ {
+		go func() {
+			if i, ok := <-in; ok {
+				fmt.Println(i)
+			}
+		}()
+	}
 }
