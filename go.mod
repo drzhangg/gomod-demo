@@ -22,9 +22,11 @@ require (
 	github.com/golang/groupcache v0.0.0-20191027212112-611e8accdfc9 // indirect
 	github.com/golang/protobuf v1.3.2
 	github.com/google/btree v1.0.0 // indirect
+	github.com/google/pprof v0.0.0-20200604032702-163a225fb653 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.14.3 // indirect
 	github.com/hpcloud/tail v1.0.0
+	github.com/ianlancetaylor/demangle v0.0.0-20200524003926-2c5affb30a03 // indirect
 	github.com/jinzhu/gorm v1.9.12
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/micro/go-micro v1.18.0
@@ -44,6 +46,7 @@ require (
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59 // indirect
 	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
+	golang.org/x/sys v0.0.0-20200610111108-226ff32320da // indirect
 	google.golang.org/grpc v1.26.0
 	gopkg.in/ini.v1 v1.52.0
 	sigs.k8s.io/yaml v1.2.0 // indirect
