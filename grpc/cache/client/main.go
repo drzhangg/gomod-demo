@@ -5,35 +5,40 @@ import (
 	"fmt"
 	"gomod-demo/grpc/cache/pb"
 	"google.golang.org/grpc"
-	"net"
 	"os"
 )
 
-type CacheService struct {
-}
-
-func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, error) {
-	return nil, fmt.Errorf("unimplemented")
-}
-
-func (c *CacheService) Store(ctx context.Context, in *pb.StoreReq) (*pb.StoreResp, error) {
-	return nil, fmt.Errorf("unimplemented")
-}
-
 func main() {
-	if err := runServer(); err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to run cache server: %s\n", err)
+	if err := runClient(); err != nil {
+		fmt.Fprintf(os.Stderr, "failed: %v\n", err)
 		os.Exit(1)
 	}
 }
 
-func runServer() error {
-	server := grpc.NewServer()
-	//注册grpc客户端
-	pb.RegisterCacheServer(server, &CacheService{})
-	l, err := net.Listen("tcp", "localhost:5051")
+func runClient() error {
+	//简历grpc连接
+	conn, err := grpc.Dial("localhost:5053", grpc.WithInsecure())
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to dial server: %v", err)
 	}
-	return server.Serve(l)
+
+	//初始化grpc客户端
+	cacheClient := pb.NewCacheClient(conn)
+
+	//调用grpc客户端方法
+	_, err = cacheClient.Store(context.TODO(), &pb.StoreReq{
+		Key: "name",
+		Val: []byte("jerry"),
+	})
+	if err != nil {
+		return fmt.Errorf("failed to store: %v", err)
+	}
+
+	resp, err := cacheClient.Get(context.TODO(), &pb.GetReq{Key: "jerry"})
+	if err != nil {
+		return fmt.Errorf("failed to get: %v", err)
+	}
+
+	fmt.Printf("Get cache value: %s\n", resp.Val)
+	return nil
 }
