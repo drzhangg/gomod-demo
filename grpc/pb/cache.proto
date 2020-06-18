@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+//option go_package = "./cache/pb";
+
+package cache;
+
+service Cache {
+    rpc Store (StoreReq) returns (StoreResp) {
+    }
+    rpc Get (GetReq) returns (GetResp) {
+    }
+}
+
+message StoreReq {
+    string key = 1;
+    bytes val = 2;
+}
+
+message StoreResp {
+
+}
+
+message GetReq {
+    string key = 1;
+}
+
+message GetResp {
+    string val = 1;
+}
