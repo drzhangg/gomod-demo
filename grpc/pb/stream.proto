@@ -5,15 +5,27 @@ option go_package = "../stream/pb";
 package stream;
 
 service StreamService {
+    //服务器端流式rpc
     rpc List (StreamReq) returns (stream StreamResp) {
     }
+
+    rpc Record (stream StreamReq) returns (StreamResp) {
+    }
+
+    rpc Route (stream StreamReq) returns (stream StreamResp) {
+    }
+
 }
 
 message StreamReq {
-    string name = 1;
-    int32 value = 2;
+    StreamPoint pt = 1;
 }
 
 message StreamResp {
+    StreamPoint pt = 1;
+}
 
+message StreamPoint {
+    string name = 1;
+    int32 value = 2;
 }

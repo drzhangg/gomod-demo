@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grpc/pb/stream.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/stream/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/stream/server/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/cache/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/cache/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/pb/cache.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/cache.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/pb/stream.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/stream.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <recent name="$PROJECT_DIR$/protobuf" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/grpc/cache/client">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/grpc/stream/server">
     <configuration name="go build gomod-demo/grpc/cache/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -93,12 +91,12 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/grpc/search/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/grpc/stream/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grpc/search/server/main.go" />
-      <package value="gomod-demo/grpc/search/server" />
+      <filePath value="$PROJECT_DIR$/grpc/stream/server/main.go" />
+      <package value="gomod-demo/grpc/stream/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -113,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/grpc/stream/server" />
         <item itemvalue="Go Build.go build gomod-demo/grpc/cache/client" />
         <item itemvalue="Go Build.go build gomod-demo/grpc/cache/server" />
         <item itemvalue="Go Build.go build gomod-demo/spider/12306" />
         <item itemvalue="Go Build.go build gomod-demo/grpc/search/client" />
-        <item itemvalue="Go Build.go build gomod-demo/grpc/search/server" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +208,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588217927012" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1592560053799">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1592560053799" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1592559548898">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1592559548898" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
