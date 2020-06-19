@@ -16,8 +16,6 @@ type CacheService struct {
 }
 
 func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, error) {
-	//val := c.store[in.Key]
-	//c.store = make(map[string][]byte)
 	val, ok := c.store[in.Key]
 	if !ok {
 		return nil, status.Errorf(codes.NotFound, "Key not found %s", in.Key)
@@ -26,6 +24,7 @@ func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, err
 }
 
 func (c *CacheService) Store(ctx context.Context, in *pb.StoreReq) (*pb.StoreResp, error) {
+	c.store = make(map[string][]byte)
 	c.store[in.Key] = in.Val
 	return &pb.StoreResp{}, nil
 }

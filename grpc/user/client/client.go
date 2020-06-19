@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	pb "gomod-demo/grpc/pb"
+	pb2 "gomod-demo/grpc/user/pb"
 	"google.golang.org/grpc"
 )
 
@@ -22,9 +22,9 @@ func main() {
 	}
 
 	//2.
-	userClient := pb.NewUserClient(client)
+	userClient := pb2.NewUserClient(client)
 
-	user := pb.GetUserReq{
+	user := pb2.GetUserReq{
 		Name: "jerry",
 	}
 

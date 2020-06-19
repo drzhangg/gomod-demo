@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	pb "gomod-demo/grpc/pb"
+	pb2 "gomod-demo/grpc/user/pb"
 	"google.golang.org/grpc"
 	"net"
 )
@@ -20,11 +20,11 @@ type UserServer struct {
 
 //var u = UserServer{}
 
-func (u *UserServer) GetUserInfo(ctx context.Context, req *pb.GetUserReq) (rsp *pb.GetUserRsp, err error) {
+func (u *UserServer) GetUserInfo(ctx context.Context, req *pb2.GetUserReq) (rsp *pb2.GetUserRsp, err error) {
 	name := req.Name
 
 	if name != "" {
-		rsp = &pb.GetUserRsp{
+		rsp = &pb2.GetUserRsp{
 			Id:    1,
 			Name:  name,
 			Age:   24,
@@ -45,7 +45,7 @@ func main() {
 	s := grpc.NewServer()
 
 	//注册grpc服务
-	pb.RegisterUserServer(s, &UserServer{})
+	pb2.RegisterUserServer(s, &UserServer{})
 
 	s.Serve(listener)
 }
