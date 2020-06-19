@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/grpc/pb/stream.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/cache/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/cache/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/user/client/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/pb/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/user/pb/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/user/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/pb/cache.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/cache.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,22 +190,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/test/0.23.1440.877@0.23.1440.877" timestamp="1592476339462" />
-    <state width="1398" height="148" key="GridCell.Tab.0.bottom" timestamp="1592538585682">
+    <state width="1398" height="148" key="GridCell.Tab.0.bottom" timestamp="1592538660847">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="148" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592538585682" />
-    <state width="1398" height="148" key="GridCell.Tab.0.center" timestamp="1592538585681">
+    <state width="1398" height="148" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592538660847" />
+    <state width="1398" height="148" key="GridCell.Tab.0.center" timestamp="1592538660845">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="148" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592538585681" />
-    <state width="1398" height="148" key="GridCell.Tab.0.left" timestamp="1592538585681">
+    <state width="1398" height="148" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592538660845" />
+    <state width="1398" height="148" key="GridCell.Tab.0.left" timestamp="1592538660844">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="148" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592538585681" />
-    <state width="1398" height="148" key="GridCell.Tab.0.right" timestamp="1592538585682">
+    <state width="1398" height="148" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592538660844" />
+    <state width="1398" height="148" key="GridCell.Tab.0.right" timestamp="1592538660845">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="148" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592538585682" />
+    <state width="1398" height="148" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592538660845" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1588217927012">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

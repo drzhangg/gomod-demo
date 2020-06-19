@@ -12,7 +12,9 @@ import (
 )
 
 type CacheService struct {
-	store map[string][]byte
+	accounts      pb.AccountsClient
+	store         map[string][]byte
+	keysByAccount map[string]int64
 }
 
 func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, error) {
@@ -24,7 +26,22 @@ func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, err
 }
 
 func (c *CacheService) Store(ctx context.Context, in *pb.StoreReq) (*pb.StoreResp, error) {
-	c.store = make(map[string][]byte)
+	//调用另一个服务取得账户信息，包含其键值限制
+	resp, err := c.accounts.GetByToken(context.TODO(), &pb.GetByTokenReq{Token: in.AccountToken})
+	if err != nil {
+		return nil, err
+	}
+
+	//检查是否超量使用
+	if c.keysByAccount[in.AccountToken] >= resp.Account.MaxCacheKeys {
+		return nil, status.Errorf(codes.FailedPrecondition, "Account %s exceeds max key limit %d", in.AccountToken, resp.Account.MaxCacheKeys)
+	}
+
+	//如果不存在，需要新加键值，对计数器加1
+	if _, ok := c.store[in.Key]; !ok {
+		c.keysByAccount[in.AccountToken] += 1
+	}
+	//  保存键值
 	c.store[in.Key] = in.Val
 	return &pb.StoreResp{}, nil
 }

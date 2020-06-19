@@ -28,8 +28,9 @@ func runClient() error {
 	key := "name"
 	//调用grpc客户端方法
 	_, err = cacheClient.Store(context.TODO(), &pb.StoreReq{
-		Key: key,
-		Val: []byte("jerry"),
+		AccountToken: "inconshreveable",
+		Key:          key,
+		Val:          []byte("jerry"),
 	})
 	if err != nil {
 		return fmt.Errorf("failed to store: %v", err)

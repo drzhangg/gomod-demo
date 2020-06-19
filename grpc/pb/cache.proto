@@ -11,9 +11,27 @@ service Cache {
     }
 }
 
+service Accounts {
+    rpc GetByToken (GetByTokenReq) returns (GetByTokenResp) {
+    }
+}
+
+message GetByTokenReq {
+    string token = 1;
+}
+
+message GetByTokenResp {
+    Account account = 1;
+}
+
+message Account {
+    int64 max_cache_keys = 1;
+}
+
 message StoreReq {
     string key = 1;
     bytes val = 2;
+    string account_token = 3;
 }
 
 message StoreResp {

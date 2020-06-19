@@ -24,9 +24,127 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
+type GetByTokenReq struct {
+	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetByTokenReq) Reset()         { *m = GetByTokenReq{} }
+func (m *GetByTokenReq) String() string { return proto.CompactTextString(m) }
+func (*GetByTokenReq) ProtoMessage()    {}
+func (*GetByTokenReq) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5fca3b110c9bbf3a, []int{0}
+}
+
+func (m *GetByTokenReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetByTokenReq.Unmarshal(m, b)
+}
+func (m *GetByTokenReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetByTokenReq.Marshal(b, m, deterministic)
+}
+func (m *GetByTokenReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetByTokenReq.Merge(m, src)
+}
+func (m *GetByTokenReq) XXX_Size() int {
+	return xxx_messageInfo_GetByTokenReq.Size(m)
+}
+func (m *GetByTokenReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetByTokenReq.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetByTokenReq proto.InternalMessageInfo
+
+func (m *GetByTokenReq) GetToken() string {
+	if m != nil {
+		return m.Token
+	}
+	return ""
+}
+
+type GetByTokenResp struct {
+	Account              *Account `protobuf:"bytes,1,opt,name=account,proto3" json:"account,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetByTokenResp) Reset()         { *m = GetByTokenResp{} }
+func (m *GetByTokenResp) String() string { return proto.CompactTextString(m) }
+func (*GetByTokenResp) ProtoMessage()    {}
+func (*GetByTokenResp) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5fca3b110c9bbf3a, []int{1}
+}
+
+func (m *GetByTokenResp) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetByTokenResp.Unmarshal(m, b)
+}
+func (m *GetByTokenResp) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetByTokenResp.Marshal(b, m, deterministic)
+}
+func (m *GetByTokenResp) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetByTokenResp.Merge(m, src)
+}
+func (m *GetByTokenResp) XXX_Size() int {
+	return xxx_messageInfo_GetByTokenResp.Size(m)
+}
+func (m *GetByTokenResp) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetByTokenResp.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetByTokenResp proto.InternalMessageInfo
+
+func (m *GetByTokenResp) GetAccount() *Account {
+	if m != nil {
+		return m.Account
+	}
+	return nil
+}
+
+type Account struct {
+	MaxCacheKeys         int64    `protobuf:"varint,1,opt,name=max_cache_keys,json=maxCacheKeys,proto3" json:"max_cache_keys,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Account) Reset()         { *m = Account{} }
+func (m *Account) String() string { return proto.CompactTextString(m) }
+func (*Account) ProtoMessage()    {}
+func (*Account) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5fca3b110c9bbf3a, []int{2}
+}
+
+func (m *Account) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Account.Unmarshal(m, b)
+}
+func (m *Account) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Account.Marshal(b, m, deterministic)
+}
+func (m *Account) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Account.Merge(m, src)
+}
+func (m *Account) XXX_Size() int {
+	return xxx_messageInfo_Account.Size(m)
+}
+func (m *Account) XXX_DiscardUnknown() {
+	xxx_messageInfo_Account.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Account proto.InternalMessageInfo
+
+func (m *Account) GetMaxCacheKeys() int64 {
+	if m != nil {
+		return m.MaxCacheKeys
+	}
+	return 0
+}
+
 type StoreReq struct {
 	Key                  string   `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
 	Val                  []byte   `protobuf:"bytes,2,opt,name=val,proto3" json:"val,omitempty"`
+	AccountToken         string   `protobuf:"bytes,3,opt,name=account_token,json=accountToken,proto3" json:"account_token,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -36,7 +154,7 @@ func (m *StoreReq) Reset()         { *m = StoreReq{} }
 func (m *StoreReq) String() string { return proto.CompactTextString(m) }
 func (*StoreReq) ProtoMessage()    {}
 func (*StoreReq) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5fca3b110c9bbf3a, []int{0}
+	return fileDescriptor_5fca3b110c9bbf3a, []int{3}
 }
 
 func (m *StoreReq) XXX_Unmarshal(b []byte) error {
@@ -71,6 +189,13 @@ func (m *StoreReq) GetVal() []byte {
 	return nil
 }
 
+func (m *StoreReq) GetAccountToken() string {
+	if m != nil {
+		return m.AccountToken
+	}
+	return ""
+}
+
 type StoreResp struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -81,7 +206,7 @@ func (m *StoreResp) Reset()         { *m = StoreResp{} }
 func (m *StoreResp) String() string { return proto.CompactTextString(m) }
 func (*StoreResp) ProtoMessage()    {}
 func (*StoreResp) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5fca3b110c9bbf3a, []int{1}
+	return fileDescriptor_5fca3b110c9bbf3a, []int{4}
 }
 
 func (m *StoreResp) XXX_Unmarshal(b []byte) error {
@@ -113,7 +238,7 @@ func (m *GetReq) Reset()         { *m = GetReq{} }
 func (m *GetReq) String() string { return proto.CompactTextString(m) }
 func (*GetReq) ProtoMessage()    {}
 func (*GetReq) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5fca3b110c9bbf3a, []int{2}
+	return fileDescriptor_5fca3b110c9bbf3a, []int{5}
 }
 
 func (m *GetReq) XXX_Unmarshal(b []byte) error {
@@ -152,7 +277,7 @@ func (m *GetResp) Reset()         { *m = GetResp{} }
 func (m *GetResp) String() string { return proto.CompactTextString(m) }
 func (*GetResp) ProtoMessage()    {}
 func (*GetResp) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5fca3b110c9bbf3a, []int{3}
+	return fileDescriptor_5fca3b110c9bbf3a, []int{6}
 }
 
 func (m *GetResp) XXX_Unmarshal(b []byte) error {
@@ -181,6 +306,9 @@ func (m *GetResp) GetVal() []byte {
 }
 
 func init() {
+	proto.RegisterType((*GetByTokenReq)(nil), "cache.GetByTokenReq")
+	proto.RegisterType((*GetByTokenResp)(nil), "cache.GetByTokenResp")
+	proto.RegisterType((*Account)(nil), "cache.Account")
 	proto.RegisterType((*StoreReq)(nil), "cache.StoreReq")
 	proto.RegisterType((*StoreResp)(nil), "cache.StoreResp")
 	proto.RegisterType((*GetReq)(nil), "cache.GetReq")
@@ -190,19 +318,26 @@ func init() {
 func init() { proto.RegisterFile("cache.proto", fileDescriptor_5fca3b110c9bbf3a) }
 
 var fileDescriptor_5fca3b110c9bbf3a = []byte{
-	// 177 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x4e, 0x4e, 0x4c, 0xce,
-	0x48, 0xd5, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x05, 0x73, 0x94, 0xf4, 0xb8, 0x38, 0x82,
-	0x4b, 0xf2, 0x8b, 0x52, 0x83, 0x52, 0x0b, 0x85, 0x04, 0xb8, 0x98, 0xb3, 0x53, 0x2b, 0x25, 0x18,
-	0x15, 0x18, 0x35, 0x38, 0x83, 0x40, 0x4c, 0x90, 0x48, 0x59, 0x62, 0x8e, 0x04, 0x93, 0x02, 0xa3,
-	0x06, 0x4f, 0x10, 0x88, 0xa9, 0xc4, 0xcd, 0xc5, 0x09, 0x55, 0x5f, 0x5c, 0xa0, 0x24, 0xc5, 0xc5,
-	0xe6, 0x9e, 0x5a, 0x82, 0x55, 0xab, 0x92, 0x34, 0x17, 0x3b, 0x58, 0xae, 0xb8, 0x00, 0x66, 0x0a,
-	0x23, 0xdc, 0x14, 0xa3, 0x58, 0x2e, 0x56, 0x67, 0x90, 0xf5, 0x42, 0x3a, 0x5c, 0xac, 0x60, 0xe3,
-	0x84, 0xf8, 0xf5, 0x20, 0x8e, 0x83, 0x39, 0x46, 0x4a, 0x00, 0x55, 0xa0, 0xb8, 0x40, 0x89, 0x41,
-	0x48, 0x8d, 0x8b, 0xd9, 0x3d, 0xb5, 0x44, 0x88, 0x17, 0x2a, 0x05, 0xb1, 0x5b, 0x8a, 0x0f, 0x99,
-	0x0b, 0x52, 0xe7, 0xc4, 0x1b, 0xc5, 0xad, 0xa7, 0xa7, 0x0f, 0x16, 0xd5, 0x2f, 0x48, 0x4a, 0x62,
-	0x03, 0xfb, 0xd8, 0x18, 0x10, 0x00, 0x00, 0xff, 0xff, 0x53, 0x1a, 0x42, 0xb1, 0x00, 0x01, 0x00,
-	0x00,
+	// 302 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x51, 0xcd, 0x4b, 0xfb, 0x40,
+	0x10, 0xfd, 0xe5, 0x17, 0xd2, 0x8f, 0xc9, 0x87, 0x65, 0xa8, 0x50, 0xe2, 0xa5, 0xac, 0x1f, 0xe4,
+	0x20, 0x09, 0xc4, 0x9b, 0x9e, 0xac, 0x87, 0x1c, 0xbc, 0xa5, 0x9e, 0x04, 0x09, 0x69, 0x58, 0x10,
+	0x62, 0x9b, 0xb5, 0xbb, 0x4a, 0xf3, 0xdf, 0xcb, 0x4e, 0x36, 0xa6, 0x42, 0x6f, 0x33, 0xef, 0xbd,
+	0xbc, 0xf7, 0xb2, 0x03, 0x6e, 0x55, 0x56, 0xef, 0x3c, 0x16, 0xfb, 0x46, 0x35, 0xe8, 0xd0, 0xc2,
+	0xae, 0xc1, 0xcf, 0xb8, 0x5a, 0xb5, 0x2f, 0x4d, 0xcd, 0x77, 0x39, 0xff, 0xc4, 0x39, 0x38, 0x4a,
+	0xcf, 0x0b, 0x6b, 0x69, 0x45, 0xd3, 0xbc, 0x5b, 0xd8, 0x3d, 0x04, 0xc7, 0x32, 0x29, 0x30, 0x82,
+	0x71, 0x59, 0x55, 0xcd, 0xd7, 0x4e, 0x91, 0xd2, 0x4d, 0x83, 0xb8, 0xb3, 0x7f, 0xec, 0xd0, 0xbc,
+	0xa7, 0x59, 0x02, 0x63, 0x83, 0xe1, 0x15, 0x04, 0xdb, 0xf2, 0x50, 0x90, 0xb0, 0xa8, 0x79, 0x2b,
+	0xe9, 0x5b, 0x3b, 0xf7, 0xb6, 0xe5, 0xe1, 0x49, 0x83, 0xcf, 0xbc, 0x95, 0x6c, 0x0d, 0x93, 0xb5,
+	0x6a, 0xf6, 0x5c, 0xd7, 0x99, 0x81, 0x5d, 0xf3, 0xd6, 0x94, 0xd1, 0xa3, 0x46, 0xbe, 0xcb, 0x8f,
+	0xc5, 0xff, 0xa5, 0x15, 0x79, 0xb9, 0x1e, 0xf1, 0x12, 0x7c, 0x93, 0x55, 0x74, 0xd5, 0x6d, 0x52,
+	0x7b, 0x06, 0xa4, 0xce, 0xcc, 0x85, 0xa9, 0x31, 0x95, 0x82, 0x85, 0x30, 0xca, 0xb8, 0x3a, 0xe9,
+	0xcf, 0x2e, 0x60, 0x4c, 0x9c, 0x14, 0x7d, 0x94, 0xf5, 0x1b, 0x95, 0xbe, 0x81, 0x43, 0x3d, 0xf1,
+	0x16, 0x1c, 0xb2, 0xc3, 0x33, 0xf3, 0xdb, 0x7d, 0xe3, 0x70, 0xf6, 0x17, 0x90, 0x82, 0xfd, 0xc3,
+	0x1b, 0xb0, 0x33, 0xae, 0xd0, 0x37, 0x54, 0x97, 0x1d, 0x06, 0xc7, 0xab, 0xd6, 0xa5, 0x19, 0x4c,
+	0xcc, 0x53, 0x49, 0x7c, 0x00, 0x18, 0x9e, 0x1c, 0xe7, 0x83, 0x76, 0x38, 0x56, 0x78, 0x7e, 0x02,
+	0xd5, 0x46, 0x2b, 0xff, 0xd5, 0x8d, 0xe3, 0x84, 0xc8, 0x44, 0x6c, 0x36, 0x23, 0xba, 0xf9, 0xdd,
+	0x4f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x85, 0x2b, 0x4f, 0xa6, 0x02, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -315,6 +450,78 @@ var _Cache_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Get",
 			Handler:    _Cache_Get_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "cache.proto",
+}
+
+// AccountsClient is the client API for Accounts service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type AccountsClient interface {
+	GetByToken(ctx context.Context, in *GetByTokenReq, opts ...grpc.CallOption) (*GetByTokenResp, error)
+}
+
+type accountsClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewAccountsClient(cc *grpc.ClientConn) AccountsClient {
+	return &accountsClient{cc}
+}
+
+func (c *accountsClient) GetByToken(ctx context.Context, in *GetByTokenReq, opts ...grpc.CallOption) (*GetByTokenResp, error) {
+	out := new(GetByTokenResp)
+	err := c.cc.Invoke(ctx, "/cache.Accounts/GetByToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// AccountsServer is the server API for Accounts service.
+type AccountsServer interface {
+	GetByToken(context.Context, *GetByTokenReq) (*GetByTokenResp, error)
+}
+
+// UnimplementedAccountsServer can be embedded to have forward compatible implementations.
+type UnimplementedAccountsServer struct {
+}
+
+func (*UnimplementedAccountsServer) GetByToken(ctx context.Context, req *GetByTokenReq) (*GetByTokenResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetByToken not implemented")
+}
+
+func RegisterAccountsServer(s *grpc.Server, srv AccountsServer) {
+	s.RegisterService(&_Accounts_serviceDesc, srv)
+}
+
+func _Accounts_GetByToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetByTokenReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccountsServer).GetByToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/cache.Accounts/GetByToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccountsServer).GetByToken(ctx, req.(*GetByTokenReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Accounts_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "cache.Accounts",
+	HandlerType: (*AccountsServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "GetByToken",
+			Handler:    _Accounts_GetByToken_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

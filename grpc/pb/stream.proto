@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "../stream/pb";
+
+package stream;
+
+service StreamService {
+    rpc List (StreamReq) returns (stream StreamResp) {
+    }
+}
+
+message StreamReq {
+    string name = 1;
+    int32 value = 2;
+}
+
+message StreamResp {
+
+}
