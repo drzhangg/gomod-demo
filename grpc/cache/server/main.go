@@ -5,19 +5,29 @@ import (
 	"fmt"
 	"gomod-demo/grpc/cache/pb"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"net"
 	"os"
 )
 
 type CacheService struct {
+	store map[string][]byte
 }
 
 func (c *CacheService) Get(ctx context.Context, in *pb.GetReq) (*pb.GetResp, error) {
-	return nil, fmt.Errorf("unimplemented")
+	//val := c.store[in.Key]
+	//c.store = make(map[string][]byte)
+	val, ok := c.store[in.Key]
+	if !ok {
+		return nil, status.Errorf(codes.NotFound, "Key not found %s", in.Key)
+	}
+	return &pb.GetResp{Val: val}, nil
 }
 
 func (c *CacheService) Store(ctx context.Context, in *pb.StoreReq) (*pb.StoreResp, error) {
-	return nil, fmt.Errorf("unimplemented")
+	c.store[in.Key] = in.Val
+	return &pb.StoreResp{}, nil
 }
 
 func main() {
@@ -29,9 +39,11 @@ func main() {
 
 func runServer() error {
 	server := grpc.NewServer()
+
+	cache := new(CacheService)
 	//注册grpc客户端
-	pb.RegisterCacheServer(server, &CacheService{})
-	l, err := net.Listen("tcp", "localhost:5051")
+	pb.RegisterCacheServer(server, cache)
+	l, err := net.Listen("tcp", "localhost:5053")
 	if err != nil {
 		return err
 	}

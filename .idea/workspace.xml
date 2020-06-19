@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/grpc/pb/search.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/search/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc/search/server/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/cache/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/pb/cache.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/cache/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/cache/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/pb/cache.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/cache.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,40 +67,40 @@
       <recent name="$PROJECT_DIR$/spider/12306/demo1" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/test">
-    <configuration name="go build gomod-demo/learn/etcd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gomod-demo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/learn/etcd/demo4.go" />
-      <package value="gomod-demo/learn/etcd" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build gomod-demo/learn/nsq/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/grpc/search/client">
+    <configuration name="go build gomod-demo/grpc/cache/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/learn/nsq/consumer/main.go" />
-      <package value="gomod-demo/learn/nsq/consumer" />
+      <filePath value="$PROJECT_DIR$/grpc/cache/client/main.go" />
+      <package value="gomod-demo/grpc/cache/client" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/learn/pprof" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/grpc/cache/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/learn/pprof/main.go" />
-      <package value="gomod-demo/learn/pprof" />
+      <filePath value="$PROJECT_DIR$/grpc/cache/server/main.go" />
+      <package value="gomod-demo/grpc/cache/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/redis" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/grpc/search/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/redis/demo1.go" />
-      <package value="gomod-demo/redis" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grpc/search/client/main.go" />
+      <package value="gomod-demo/grpc/search/client" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gomod-demo/grpc/search/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gomod-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grpc/search/server/main.go" />
+      <package value="gomod-demo/grpc/search/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -110,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/grpc/search/client" />
+        <item itemvalue="Go Build.go build gomod-demo/grpc/search/server" />
+        <item itemvalue="Go Build.go build gomod-demo/grpc/cache/client" />
+        <item itemvalue="Go Build.go build gomod-demo/grpc/cache/server" />
         <item itemvalue="Go Build.go build gomod-demo/test" />
-        <item itemvalue="Go Build.go build gomod-demo/redis" />
-        <item itemvalue="Go Build.go build gomod-demo/learn/pprof" />
-        <item itemvalue="Go Build.go build gomod-demo/learn/etcd" />
-        <item itemvalue="Go Build.go build gomod-demo/learn/nsq/consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -187,22 +192,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/test/0.23.1440.877@0.23.1440.877" timestamp="1592476339462" />
-    <state width="1398" height="194" key="GridCell.Tab.0.bottom" timestamp="1592481857041">
+    <state width="1398" height="194" key="GridCell.Tab.0.bottom" timestamp="1592536463843">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592481857041" />
-    <state width="1398" height="194" key="GridCell.Tab.0.center" timestamp="1592481857040">
+    <state width="1398" height="194" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592536463843" />
+    <state width="1398" height="194" key="GridCell.Tab.0.center" timestamp="1592536463841">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592481857040" />
-    <state width="1398" height="194" key="GridCell.Tab.0.left" timestamp="1592481857039">
+    <state width="1398" height="194" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592536463841" />
+    <state width="1398" height="194" key="GridCell.Tab.0.left" timestamp="1592536463841">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592481857039" />
-    <state width="1398" height="194" key="GridCell.Tab.0.right" timestamp="1592481857040">
+    <state width="1398" height="194" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592536463841" />
+    <state width="1398" height="194" key="GridCell.Tab.0.right" timestamp="1592536463842">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="194" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592481857040" />
+    <state width="1398" height="194" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592536463842" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1588217927012">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -25,16 +25,18 @@ func runClient() error {
 	//初始化grpc客户端
 	cacheClient := pb.NewCacheClient(conn)
 
+	key := "name"
 	//调用grpc客户端方法
 	_, err = cacheClient.Store(context.TODO(), &pb.StoreReq{
-		Key: "name",
+		Key: key,
 		Val: []byte("jerry"),
 	})
 	if err != nil {
 		return fmt.Errorf("failed to store: %v", err)
 	}
 
-	resp, err := cacheClient.Get(context.TODO(), &pb.GetReq{Key: "jerry"})
+	clientKey := &pb.GetReq{Key: key}
+	resp, err := cacheClient.Get(context.TODO(), clientKey)
 	if err != nil {
 		return fmt.Errorf("failed to get: %v", err)
 	}

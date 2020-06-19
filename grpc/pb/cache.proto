@@ -25,5 +25,5 @@ message GetReq {
 }
 
 message GetResp {
-    string val = 1;
+    bytes val = 1;
 }
