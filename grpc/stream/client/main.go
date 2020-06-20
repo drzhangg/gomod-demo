@@ -1,8 +1,10 @@
 package main
 
 import (
+	"context"
 	"gomod-demo/grpc/stream/pb"
 	"google.golang.org/grpc"
+	"io"
 	"log"
 )
 
@@ -46,13 +48,71 @@ func main() {
 }
 
 func printLists(client pb.StreamServiceClient, r *pb.StreamReq) error {
+	stream, err := client.List(context.TODO(), r)
+	if err != nil {
+		return err
+	}
+	for {
+		resp, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return err
+		}
+		log.Printf("resp: pj.name: %s, pt.value: %d", resp.Pt.Name, resp.Pt.Value)
+	}
+
 	return nil
 }
 
 func printRecord(client pb.StreamServiceClient, r *pb.StreamReq) error {
+	stream, err := client.Record(context.Background())
+	if err != nil {
+		return err
+	}
+
+	for n := 0; n < 6; n++ {
+		err := stream.Send(r)
+		if err != nil {
+			return err
+		}
+	}
+
+	resp, err := stream.CloseAndRecv()
+	if err != nil {
+		return err
+	}
+
+	log.Printf("resp: pj.name: %s, pt.value: %d", resp.Pt.Name, resp.Pt.Value)
+
 	return nil
 }
 
 func printRoute(client pb.StreamServiceClient, r *pb.StreamReq) error {
+	stream, err := client.Route(context.Background())
+	if err != nil {
+		return err
+	}
+
+	for n := 0; n <= 6; n++ {
+		err = stream.Send(r)
+		if err != nil {
+			return err
+		}
+
+		resp, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return err
+		}
+
+		log.Printf("resp: pj.name: %s, pt.value: %d", resp.Pt.Name, resp.Pt.Value)
+	}
+
+	stream.CloseSend()
+
 	return nil
 }
