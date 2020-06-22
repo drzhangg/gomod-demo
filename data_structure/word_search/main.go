@@ -18,8 +18,8 @@ func main() {
 	//}
 	//fmt.Println(len(data))
 
-	inputFilePath := "demo.txt"
-	outputFilePath := "result.txt"
+	inputFilePath := "./demo.txt"
+	outputFilePath := "./result.txt"
 
 	CountTestBase(inputFilePath, outputFilePath)
 }
