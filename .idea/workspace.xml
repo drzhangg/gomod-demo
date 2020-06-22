@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nsq/demo1/consumer/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nsq/demo1/producer/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nsq/demo2/consumer/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nsq/demo2/producer/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_structure/word_search/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/data_structure/word_search/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elasticsearch/demo1.go" beforeDir="false" afterPath="$PROJECT_DIR$/elasticsearch/demo1.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +61,13 @@
       <recent name="$PROJECT_DIR$/protobuf" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/nsq/demo2/consumer">
-    <configuration name="go build gomod-demo/nsq/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/elasticsearch">
+    <configuration name="go build gomod-demo/elasticsearch" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/nsq/consumer/main.go" />
-      <package value="gomod-demo/nsq/consumer" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/elasticsearch/demo1.go" />
+      <package value="gomod-demo/elasticsearch" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -113,11 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/elasticsearch" />
         <item itemvalue="Go Build.go build gomod-demo/nsq/demo2/producer" />
         <item itemvalue="Go Build.go build gomod-demo/nsq/demo2/consumer" />
         <item itemvalue="Go Build.go build gomod-demo/nsq/demo1/producer" />
         <item itemvalue="Go Build.go build gomod-demo/nsq/demo1/consumer" />
-        <item itemvalue="Go Build.go build gomod-demo/nsq/consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +146,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="519" y="398" key="#GOROOT/0.23.1440.877@0.23.1440.877" timestamp="1588143274775" />
+    <state x="417" y="108" key="#go_build_gomod-demo/elasticsearch" timestamp="1592813481195">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="417" y="108" key="#go_build_gomod-demo/elasticsearch/0.23.1440.877@0.23.1440.877" timestamp="1592813481195" />
     <state x="417" y="108" key="#go_build_gomod-demo/gorm" timestamp="1587050217483">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -190,26 +190,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/test/0.23.1440.877@0.23.1440.877" timestamp="1592476339462" />
-    <state width="1398" height="162" key="GridCell.Tab.0.bottom" timestamp="1592811199681">
+    <state width="1398" height="162" key="GridCell.Tab.0.bottom" timestamp="1592813607156">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="162" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592811199681" />
-    <state width="1398" height="162" key="GridCell.Tab.0.center" timestamp="1592811199678">
+    <state width="1398" height="162" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1592813607156" />
+    <state width="1398" height="162" key="GridCell.Tab.0.center" timestamp="1592813607155">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="162" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592811199678" />
-    <state width="1398" height="162" key="GridCell.Tab.0.left" timestamp="1592811199677">
+    <state width="1398" height="162" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1592813607155" />
+    <state width="1398" height="162" key="GridCell.Tab.0.left" timestamp="1592813607154">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="162" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592811199677" />
-    <state width="1398" height="162" key="GridCell.Tab.0.right" timestamp="1592811199680">
+    <state width="1398" height="162" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1592813607154" />
+    <state width="1398" height="162" key="GridCell.Tab.0.right" timestamp="1592813607156">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="162" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592811199680" />
+    <state width="1398" height="162" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1592813607156" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1588217927012">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588217927012" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1592829665941">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1592829665941" />
     <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1592560053799">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
