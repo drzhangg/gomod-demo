@@ -17,6 +17,7 @@ require (
 	github.com/go-log/log v0.2.0
 	github.com/go-redis/redis v6.15.7+incompatible
 	github.com/go-sql-driver/mysql v1.5.0
+	github.com/go-xorm/xorm v0.7.9
 	github.com/gocolly/colly v1.2.0
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/groupcache v0.0.0-20191027212112-611e8accdfc9 // indirect
