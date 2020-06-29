@@ -140,6 +140,8 @@ func main() {
 	}
 	fmt.Printf("Indexed tweet %s to index %s, type %s\n", put2.Id, put2.Index, put2.Type)
 
+
+
 	// Get tweet with specified ID
 	get1, err := client.Get().
 		Index("twitter").
