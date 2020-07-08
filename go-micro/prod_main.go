@@ -3,12 +3,13 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/micro/go-micro/registry"
-	"github.com/micro/go-micro/registry/etcd"
 	"github.com/micro/go-micro/web"
+	"github.com/micro/go-plugins/registry/consul"
 )
 
 func main() {
-	etcdRegistry := etcd.NewRegistry(registry.Addrs("127.0.0.1:2379"))
+	consulReg := consul.NewRegistry(
+		registry.Addrs("47.103.9.218:8500"))
 
 	router := gin.Default()
 	router.Handle("GET", "/user", func(context *gin.Context) {
@@ -19,12 +20,12 @@ func main() {
 		c.String(200, "news api")
 	})
 
-	service := web.NewService(
-		web.Name("product"),
+	server := web.NewService(
+		web.Name("prodservice"),
 		web.Address(":8001"),
 		web.Handler(router),
-		web.Registry(etcdRegistry),
+		web.Registry(consulReg),
 	)
 
-	service.Run()
+	server.Run()
 }

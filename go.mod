@@ -31,6 +31,7 @@ require (
 	github.com/jinzhu/gorm v1.9.12
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/micro/go-micro v1.18.0
+	github.com/micro/go-plugins v1.5.1 // indirect
 	github.com/micro/protoc-gen-micro v1.0.0
 	github.com/nats-io/nats-server/v2 v2.1.4 // indirect
 	github.com/nsqio/go-nsq v1.0.8
