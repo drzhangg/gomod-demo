@@ -5,6 +5,8 @@ import (
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-micro/web"
 	"github.com/micro/go-plugins/registry/consul"
+	"go-micro/prodservice"
+	"net/http"
 )
 
 func main() {
@@ -12,16 +14,15 @@ func main() {
 		registry.Addrs("47.103.9.218:8500"))
 
 	router := gin.Default()
-	router.Handle("GET", "/user", func(context *gin.Context) {
-		context.String(200, "user api")
-	})
-
-	router.Handle("GET", "/news", func(c *gin.Context) {
-		c.String(200, "news api")
-	})
+	v1 := router.Group("/v1")
+	{
+		v1.Handle("GET", "/prods", func(c *gin.Context) {
+			c.JSON(http.StatusOK, prodservice.NewProdList(5))
+		})
+	}
 
 	server := web.NewService(
-		web.Name("prodservice"),
+		web.Name("prodservice1"),
 		web.Address(":8001"),
 		web.Handler(router),
 		web.Registry(consulReg),
