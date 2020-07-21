@@ -16,7 +16,7 @@ func (redis *RedisCache) Set(key, value string) {
 }
 
 func (redis *RedisCache) Get(key string) string {
-	return redis.data[key]
+	return "redis:" + redis.data[key]
 }
 
 type MemCache struct {
@@ -28,7 +28,7 @@ func (mem *MemCache) Set(key, val string) {
 }
 
 func (mem *MemCache) Get(key string) string {
-	return mem.data[key]
+	return "mem:" + mem.data[key]
 }
 
 type CacheType int
@@ -47,7 +47,7 @@ func (factory *CacheFactory) Create(cacheType CacheType) (Cache, error) {
 	}
 
 	if cacheType == mem {
-		return &MemCache{data: map[string]string{}},nil
+		return &MemCache{data: map[string]string{}}, nil
 	}
-	return nil,errors.New("error cache type")
+	return nil, errors.New("error cache type")
 }
