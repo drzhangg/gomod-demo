@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_structure/demo4/cache.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_structure/demo4/cache_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,9 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Go Application" />
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -48,7 +48,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
@@ -62,22 +62,22 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestCacheFactory in gomod-demo/data_structure/demo4">
-    <configuration name="go build go-micro (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gomod-demo" />
-      <working_directory value="$PROJECT_DIR$/go-micro" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/go-micro/prod_main.go" />
-      <package value="go-micro" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build gomod-demo/chat">
     <configuration name="go build go-micro (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$/go-micro" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/go-micro/test.go" />
       <package value="go-micro" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gomod-demo/chat" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gomod-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/chat/main.go" />
+      <package value="gomod-demo/chat" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/chat" />
         <item itemvalue="Go Test.TestCacheFactory in gomod-demo/data_structure/demo4" />
         <item itemvalue="Go Test.TestCache in gomod-demo/data_structure/demo2" />
         <item itemvalue="Go Test.TestProduct_Create in gomod-demo/data_structure/demo1" />
         <item itemvalue="Go Build.go build go-micro (2)" />
-        <item itemvalue="Go Build.go build go-micro (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -169,14 +169,6 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/elasticsearch/0.23.1440.877@0.23.1440.877" timestamp="1592813481195" />
-    <state x="417" y="108" key="#go_build_gomod-demo/gorm" timestamp="1587050217483">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/gorm/0.23.1440.877@0.23.1440.877" timestamp="1587050217483" />
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/array" timestamp="1587009747083">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/array/0.23.1440.877@0.23.1440.877" timestamp="1587009747083" />
     <state x="417" y="108" key="#go_build_gomod-demo/learn/channel" timestamp="1587967503215">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -193,10 +185,6 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/learn/etcd/0.23.1440.877@0.23.1440.877" timestamp="1590926126951" />
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/json" timestamp="1587115828722">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/json/0.23.1440.877@0.23.1440.877" timestamp="1587115828722" />
     <state x="417" y="108" key="#go_build_gomod-demo/learn/json_(1)" timestamp="1587866228381">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -209,30 +197,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="417" y="108" key="#go_build_gomod-demo/test/0.23.1440.877@0.23.1440.877" timestamp="1592476339462" />
-    <state width="1398" height="154" key="GridCell.Tab.0.bottom" timestamp="1595341965293">
+    <state width="1398" height="154" key="GridCell.Tab.0.bottom" timestamp="1596374834935">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="154" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1595341965293" />
-    <state width="1398" height="154" key="GridCell.Tab.0.center" timestamp="1595341965291">
+    <state width="1398" height="154" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596374834935" />
+    <state width="1398" height="154" key="GridCell.Tab.0.center" timestamp="1596374834932">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="154" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1595341965291" />
-    <state width="1398" height="154" key="GridCell.Tab.0.left" timestamp="1595341965291">
+    <state width="1398" height="154" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596374834932" />
+    <state width="1398" height="154" key="GridCell.Tab.0.left" timestamp="1596374834931">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="154" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1595341965291" />
-    <state width="1398" height="154" key="GridCell.Tab.0.right" timestamp="1595341965292">
+    <state width="1398" height="154" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596374834931" />
+    <state width="1398" height="154" key="GridCell.Tab.0.right" timestamp="1596374834934">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="154" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1595341965292" />
+    <state width="1398" height="154" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596374834934" />
     <state x="308" y="203" key="IDE.errors.dialog" timestamp="1593239494938">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="308" y="203" key="IDE.errors.dialog/0.23.1440.877@0.23.1440.877" timestamp="1593239494938" />
-    <state x="229" y="100" key="SettingsEditor" timestamp="1594218977293">
+    <state x="229" y="100" key="SettingsEditor" timestamp="1596374967362">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1594218977293" />
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1596374967362" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1592829665941">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
