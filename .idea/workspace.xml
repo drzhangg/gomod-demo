@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/defer/demo1.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12306.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="HTML File" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -36,7 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -64,13 +61,22 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/nsq/docker/consumer">
-    <configuration name="go build gomod-demo/nsq/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/defer">
+    <configuration name="go build gomod-demo/learn/defer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/nsq/consumer/main.go" />
-      <package value="gomod-demo/nsq/consumer" />
+      <filePath value="$PROJECT_DIR$/learn/defer/demo1.go" />
+      <package value="gomod-demo/learn/defer" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build gomod-demo/learn/etcd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gomod-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/learn/etcd/demo1.go" />
+      <package value="gomod-demo/learn/etcd" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -83,6 +89,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build gomod-demo/nsq/demo1/producer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gomod-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/nsq/demo1/producer/main.go" />
+      <package value="gomod-demo/nsq/demo1/producer" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build gomod-demo/nsq/docker/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -92,31 +107,13 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/nsq/docker/producer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gomod-demo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/nsq/docker/producer/main.go" />
-      <package value="gomod-demo/nsq/docker/producer" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build gomod-demo/nsq/producer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gomod-demo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/nsq/producer/main.go" />
-      <package value="gomod-demo/nsq/producer" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build gomod-demo/nsq/docker/consumer" />
-        <item itemvalue="Go Build.go build gomod-demo/nsq/docker/producer" />
-        <item itemvalue="Go Build.go build gomod-demo/nsq/producer" />
-        <item itemvalue="Go Build.go build gomod-demo/nsq/consumer" />
+        <item itemvalue="Go Build.go build gomod-demo/learn/defer" />
+        <item itemvalue="Go Build.go build gomod-demo/learn/etcd" />
         <item itemvalue="Go Build.go build gomod-demo/nsq/demo1/consumer" />
+        <item itemvalue="Go Build.go build gomod-demo/nsq/demo1/producer" />
+        <item itemvalue="Go Build.go build gomod-demo/nsq/docker/consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -145,82 +142,26 @@
     <proxy>https://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="191" key="#docker.nsqlookupd:_Compose_Deployment" timestamp="1597155532774">
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/etcd" timestamp="1606230733099">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="191" key="#docker.nsqlookupd:_Compose_Deployment/0.23.1440.877@0.23.1440.877" timestamp="1597155532774" />
-    <state x="417" y="191" key="#docker:_Compose_Deployment" timestamp="1597155535737">
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/etcd/0.23.1440.877@0.23.1440.877" timestamp="1606230733099" />
+    <state width="1398" height="241" key="GridCell.Tab.0.bottom" timestamp="1606230836544">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="191" key="#docker:_Compose_Deployment/0.23.1440.877@0.23.1440.877" timestamp="1597155535737" />
-    <state x="417" y="108" key="#go_build_go-micro" timestamp="1594219234805">
+    <state width="1398" height="241" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606230836544" />
+    <state width="1398" height="241" key="GridCell.Tab.0.center" timestamp="1606230836542">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="108" key="#go_build_go-micro/0.23.1440.877@0.23.1440.877" timestamp="1594219234805" />
-    <state x="417" y="108" key="#go_build_go-micro_(1)" timestamp="1594219304025">
+    <state width="1398" height="241" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606230836542" />
+    <state width="1398" height="241" key="GridCell.Tab.0.left" timestamp="1606230836541">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="108" key="#go_build_go-micro_(1)/0.23.1440.877@0.23.1440.877" timestamp="1594219304025" />
-    <state x="417" y="108" key="#go_build_go-micro_(2)" timestamp="1594555289214">
+    <state width="1398" height="241" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606230836541" />
+    <state width="1398" height="241" key="GridCell.Tab.0.right" timestamp="1606230836542">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="417" y="108" key="#go_build_go-micro_(2)/0.23.1440.877@0.23.1440.877" timestamp="1594555289214" />
-    <state x="417" y="108" key="#go_build_gomod-demo/elasticsearch" timestamp="1592813481195">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/elasticsearch/0.23.1440.877@0.23.1440.877" timestamp="1592813481195" />
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/etcd" timestamp="1590926126951">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/learn/etcd/0.23.1440.877@0.23.1440.877" timestamp="1590926126951" />
-    <state x="417" y="108" key="#go_build_gomod-demo/redis" timestamp="1592476028931">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/redis/0.23.1440.877@0.23.1440.877" timestamp="1592476028931" />
-    <state x="417" y="108" key="#go_build_gomod-demo/test" timestamp="1592476339462">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="417" y="108" key="#go_build_gomod-demo/test/0.23.1440.877@0.23.1440.877" timestamp="1592476339462" />
-    <state width="1398" height="192" key="GridCell.Tab.0.bottom" timestamp="1597157041543">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="192" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597157041543" />
-    <state width="1398" height="192" key="GridCell.Tab.0.center" timestamp="1597157041542">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="192" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597157041542" />
-    <state width="1398" height="192" key="GridCell.Tab.0.left" timestamp="1597157041541">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="192" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597157041541" />
-    <state width="1398" height="192" key="GridCell.Tab.0.right" timestamp="1597157041543">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="192" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597157041543" />
-    <state x="308" y="203" key="IDE.errors.dialog" timestamp="1593239494938">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="308" y="203" key="IDE.errors.dialog/0.23.1440.877@0.23.1440.877" timestamp="1593239494938" />
-    <state x="229" y="100" key="SettingsEditor" timestamp="1596374967362">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1596374967362" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1592829665941">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="500" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1592829665941" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1595339768415">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1595339768415" />
-    <state x="421" y="207" width="598" height="486" key="find.popup" timestamp="1596956575427">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="421" y="207" width="598" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1596956575427" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1595169878126">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1595169878126" />
+    <state width="1398" height="241" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606230836542" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
