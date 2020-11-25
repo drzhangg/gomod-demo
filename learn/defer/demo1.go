@@ -1,27 +1,21 @@
 package main
 
-import "fmt"
-
-func test1() int {
-	var res int
-	defer func() {
-		res++
-		fmt.Println(111)
-	}()
-	fmt.Println(res)
-	return res
-}
-
-func test2() (res int) {
-	defer func() {
-		res++
-		fmt.Println(222)
-	}()
-	fmt.Println(res)
-	return
-}
+import (
+	"fmt"
+)
 
 func main() {
-	test1()
-	test2()
+	fmt.Println("system start")
+	defer func() {
+		if msg := recover(); msg != nil {
+			fmt.Println("revocer:", msg)
+		}
+	}()
+	pic()
+}
+
+func pic() {
+	fmt.Println("1")
+	panic("panic....")
+	fmt.Println(2)
 }

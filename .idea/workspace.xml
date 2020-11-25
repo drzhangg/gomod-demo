@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learn/defer/demo1.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/defer/demo1.go" beforeDir="false" afterPath="$PROJECT_DIR$/learn/defer/demo1.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="ReadonlyStatusHandler">
@@ -146,22 +147,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="426" y="108" key="#go_build_gomod-demo/learn/etcd/0.23.1440.877@0.23.1440.877" timestamp="1606230733099" />
-    <state width="1398" height="241" key="GridCell.Tab.0.bottom" timestamp="1606230836544">
+    <state width="1398" height="241" key="GridCell.Tab.0.bottom" timestamp="1606302618489">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="241" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606230836544" />
-    <state width="1398" height="241" key="GridCell.Tab.0.center" timestamp="1606230836542">
+    <state width="1398" height="241" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606302618489" />
+    <state width="1398" height="241" key="GridCell.Tab.0.center" timestamp="1606302618488">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="241" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606230836542" />
-    <state width="1398" height="241" key="GridCell.Tab.0.left" timestamp="1606230836541">
+    <state width="1398" height="241" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606302618488" />
+    <state width="1398" height="241" key="GridCell.Tab.0.left" timestamp="1606302618487">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="241" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606230836541" />
-    <state width="1398" height="241" key="GridCell.Tab.0.right" timestamp="1606230836542">
+    <state width="1398" height="241" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606302618487" />
+    <state width="1398" height="241" key="GridCell.Tab.0.right" timestamp="1606302618488">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="241" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606230836542" />
+    <state width="1398" height="241" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606302618488" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
