@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa4633a-3cae-4792-9c50-2ed1f0629ba0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learn/goroutine/demo5.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn/array/demo4.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn/channel/demo2.go" beforeDir="false" afterPath="$PROJECT_DIR$/learn/channel/demo2.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,22 +63,22 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/goroutine">
-    <configuration name="go build gomod-demo/gorm (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build gomod-demo/learn/array">
+    <configuration name="go build gomod-demo/learn/array" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/gorm/demo2.go" />
-      <package value="gomod-demo/gorm" />
+      <filePath value="$PROJECT_DIR$/learn/array/demo4.go" />
+      <package value="gomod-demo/learn/array" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build gomod-demo/gorm" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gomod-demo/learn/channel (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gomod-demo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/gorm/demo1.go" />
-      <package value="gomod-demo/gorm" />
+      <filePath value="$PROJECT_DIR$/learn/channel/demo2.go" />
+      <package value="gomod-demo/learn/channel" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -110,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build gomod-demo/learn/array" />
+        <item itemvalue="Go Build.go build gomod-demo/learn/channel (1)" />
         <item itemvalue="Go Build.go build gomod-demo/learn/goroutine" />
         <item itemvalue="Go Build.go build gomod-demo/learn/channel" />
         <item itemvalue="Go Build.go build gomod-demo/learn/defer (2)" />
-        <item itemvalue="Go Build.go build gomod-demo/gorm (1)" />
-        <item itemvalue="Go Build.go build gomod-demo/gorm" />
       </list>
     </recent_temporary>
   </component>
@@ -151,10 +152,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="426" y="108" key="#go_build_gomod-demo/gorm_(1)/0.23.1440.877@0.23.1440.877" timestamp="1606306417974" />
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/array" timestamp="1607255957569">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/array/0.23.1440.877@0.23.1440.877" timestamp="1607255957569" />
     <state x="426" y="108" key="#go_build_gomod-demo/learn/channel" timestamp="1606832039085">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="426" y="108" key="#go_build_gomod-demo/learn/channel/0.23.1440.877@0.23.1440.877" timestamp="1606832039085" />
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/channel_(1)" timestamp="1607151876154">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="426" y="108" key="#go_build_gomod-demo/learn/channel_(1)/0.23.1440.877@0.23.1440.877" timestamp="1607151876154" />
     <state x="426" y="108" key="#go_build_gomod-demo/learn/defer" timestamp="1606304300744">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -175,22 +184,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="426" y="108" key="#go_build_gomod-demo/learn/goroutine/0.23.1440.877@0.23.1440.877" timestamp="1606832326888" />
-    <state width="1398" height="277" key="GridCell.Tab.0.bottom" timestamp="1606832630811">
+    <state width="1398" height="277" key="GridCell.Tab.0.bottom" timestamp="1607151918861">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="277" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606832630811" />
-    <state width="1398" height="277" key="GridCell.Tab.0.center" timestamp="1606832630810">
+    <state width="1398" height="277" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1607151918861" />
+    <state width="1398" height="277" key="GridCell.Tab.0.center" timestamp="1607151918860">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="277" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606832630810" />
-    <state width="1398" height="277" key="GridCell.Tab.0.left" timestamp="1606832630809">
+    <state width="1398" height="277" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1607151918860" />
+    <state width="1398" height="277" key="GridCell.Tab.0.left" timestamp="1607151918736">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="277" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606832630809" />
-    <state width="1398" height="277" key="GridCell.Tab.0.right" timestamp="1606832630810">
+    <state width="1398" height="277" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1607151918736" />
+    <state width="1398" height="277" key="GridCell.Tab.0.right" timestamp="1607151918861">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="277" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606832630810" />
+    <state width="1398" height="277" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1607151918861" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

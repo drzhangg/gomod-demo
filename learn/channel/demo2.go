@@ -1,23 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	ch := make(chan int)
 
 	go func() {
-		for i := 0; i <5; i++ {
+		for i := 0; i < 5; i++ {
 			ch <- i
 		}
 		close(ch)
 	}()
 
-
 	for {
-		if num, ok := <-ch; ok {
-			fmt.Println("num:", num)
-		} else {
-			break
-		}
+		n := <-ch
+		fmt.Println(n)
+		time.Sleep(time.Second)
 	}
 }
